@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GabrielBonatto_MacxRoberto_ProjetoFinal.View {
-  public partial class CadDadosResult : Form {
-    public CadDadosResult() {
+  public partial class Main : Form {
+    public Main() {
       InitializeComponent();
     }
   }

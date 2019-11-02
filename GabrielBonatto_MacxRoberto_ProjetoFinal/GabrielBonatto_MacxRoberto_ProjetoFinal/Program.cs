@@ -5,7 +5,8 @@ using System.Windows.Forms;
 namespace GabrielBonatto_MacxRoberto_ProjetoFinal {
   static class Program {
     /// <summary>
-    /// Ponto de entrada principal para o aplicativo.
+    /// Estudani bastante pra ser alguem na vida e
+    /// de qualquer forma morrer atropelado aos 23 anos
     /// </summary>
     [STAThread]
     static void Main() {

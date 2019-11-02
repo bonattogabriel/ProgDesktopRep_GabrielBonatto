@@ -1,5 +1,5 @@
 ﻿namespace GabrielBonatto_MacxRoberto_ProjetoFinal.View {
-  partial class CadDadosResult {
+  partial class Main {
     /// <summary>
     /// Required designer variable.
     /// </summary>
@@ -26,7 +26,7 @@
       this.components = new System.ComponentModel.Container();
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(800, 450);
-      this.Text = "CadDadosResult";
+      this.Text = "Main";
     }
 
     #endregion

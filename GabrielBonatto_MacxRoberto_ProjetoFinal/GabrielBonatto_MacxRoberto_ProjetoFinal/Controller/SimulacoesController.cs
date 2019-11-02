@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Model {
-  class DadosCalculo {
+namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Controller {
+  class SimulacoesController {
+
   }
 }
