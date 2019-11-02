@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using GabrielBonatto_MacxRoberto_ProjetoFinal.View;
+using System;
 using System.Windows.Forms;
 
 namespace GabrielBonatto_MacxRoberto_ProjetoFinal {
@@ -13,7 +11,7 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal {
     static void Main() {
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new Form1());
+      Application.Run(new CadEmpresa());
     }
   }
 }
