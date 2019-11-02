@@ -13,5 +13,6 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.View {
     public CadEmpresa() {
       InitializeComponent();
     }
-  }
+
+    }
 }
