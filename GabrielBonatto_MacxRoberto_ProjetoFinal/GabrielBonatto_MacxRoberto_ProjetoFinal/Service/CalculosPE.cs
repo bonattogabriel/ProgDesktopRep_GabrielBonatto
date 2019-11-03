@@ -47,7 +47,5 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Service
       return CalcularTotalDeVendas() - CalcularCustoTotal();
     }
 
-
-
   }
 }
