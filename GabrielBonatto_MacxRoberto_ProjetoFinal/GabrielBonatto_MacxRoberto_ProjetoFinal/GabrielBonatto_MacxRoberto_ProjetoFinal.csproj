@@ -67,6 +67,7 @@
       <DependentUpon>ProjetoFinalDataSetEmpresa.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\CalculosPE.cs" />
     <Compile Include="View\CadEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>

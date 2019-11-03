@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Model {
-  public class Simulacoes {
+  class Simulacoes {
+
     public long? Id { get; set; }
     public double CustoFixoTotal { get; set; }
     public double CustoVarUnit { get; set; }
@@ -31,6 +32,23 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Model {
       QtdeVendaFinal = qtdeVendaFinal;
       IncrementoUnit = incrementoUnit;
       Empresa = empresa ?? throw new ArgumentNullException(nameof(empresa));
+    }
+
+    public Double CalcularCustoTotal() {
+      return CustoFixoTotal + (CustoVarUnit * QtdeVendaFinal);
+    }
+
+    public Double CalcularTotalDeVendas() {
+      return PrecoUnit * QtdeVendaFinal;
+    }
+
+    public Double CalcularCustoUnit()
+    {
+      return CalcularCustoTotal() / QtdeVendaFinal;
+    }
+
+    public Double CalcularGanhoPerda() {
+      return CalcularTotalDeVendas() - CalcularCustoTotal();
     }
 
     public override bool Equals(object obj) {
