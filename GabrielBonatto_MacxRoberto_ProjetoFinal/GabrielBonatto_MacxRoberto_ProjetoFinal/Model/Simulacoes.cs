@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Model {
   class Simulacoes {
 
-    private long? Id { get; set; }
-    private double CustoFixoTotal { get; set; }
-    private double CustoVarUnit { get; set; }
-    private double PrecoUnit { get; set; }
-    private int QtdeVendaInicial { get; set; }
-    private int QtdeVendaFinal { get; set; }
-    private int IncrementoUnit { get; set; }
-    private Empresa Empresa { get; set; }
+    public long? Id { get; set; }
+    public double CustoFixoTotal { get; set; }
+    public double CustoVarUnit { get; set; }
+    public double PrecoUnit { get; set; }
+    public int QtdeVendaInicial { get; set; }
+    public int QtdeVendaFinal { get; set; }
+    public int IncrementoUnit { get; set; }
+    public Empresa Empresa { get; set; }
 
     public Simulacoes(long? id,
       double custoFixoTotal,
@@ -32,6 +32,23 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Model {
       QtdeVendaFinal = qtdeVendaFinal;
       IncrementoUnit = incrementoUnit;
       Empresa = empresa ?? throw new ArgumentNullException(nameof(empresa));
+    }
+
+    public Double CalcularCustoTotal() {
+      return CustoFixoTotal + (CustoVarUnit * QtdeVendaFinal);
+    }
+
+    public Double CalcularTotalDeVendas() {
+      return PrecoUnit * QtdeVendaFinal;
+    }
+
+    public Double CalcularCustoUnit()
+    {
+      return CalcularCustoTotal() / QtdeVendaFinal;
+    }
+
+    public Double CalcularGanhoPerda() {
+      return CalcularTotalDeVendas() - CalcularCustoTotal();
     }
 
     public override bool Equals(object obj) {

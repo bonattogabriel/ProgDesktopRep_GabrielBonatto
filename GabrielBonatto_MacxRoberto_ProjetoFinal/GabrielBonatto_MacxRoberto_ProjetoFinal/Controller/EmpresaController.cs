@@ -6,5 +6,7 @@ using System.Threading.Tasks;
 
 namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Controller {
   class EmpresaController {
+
+
   }
 }
