@@ -13,7 +13,6 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.View {
   public partial class Main : Form {
     public Main() {
       InitializeComponent();
-      Simulacoes simulacoes = new Simulacoes().
 
     }
 
@@ -22,7 +21,7 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.View {
     }
 
     private void EmpresaToolStripMenuItem_Click(object sender, EventArgs e) {
-      new CadEmpresa().Show();
+      new TabelaEmpresa().Show();
     }
 
     private void SimulaçõesToolStripMenuItem_Click(object sender, EventArgs e) {

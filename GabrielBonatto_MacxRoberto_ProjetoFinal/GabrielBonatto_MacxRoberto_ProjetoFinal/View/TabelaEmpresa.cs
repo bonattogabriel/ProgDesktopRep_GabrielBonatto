@@ -15,13 +15,27 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.View {
     }
 
     private void TabelaEmpresa_Load(object sender, EventArgs e) {
-      // TODO: esta linha de código carrega dados na tabela 'projetoFinalDataSetEmpresa.EMPRESA'. Você pode movê-la ou removê-la conforme necessário.
-      this.eMPRESATableAdapter.Fill(this.projetoFinalDataSetEmpresa.EMPRESA);
+      // TODO: esta linha de código carrega dados na tabela 'projetoFinalDataSetGeral.EMPRESA1'. Você pode movê-la ou removê-la conforme necessário.
+      this.eMPRESA1TableAdapter.Fill(this.projetoFinalDataSetGeral.EMPRESA1);
 
     }
 
     private void Button1_Click(object sender, EventArgs e) {
       new CadEmpresa().Show();
+    }
+
+    private void EMPRESA1BindingNavigatorSaveItem_Click(object sender, EventArgs e) {
+      this.Validate();
+      this.eMPRESA1BindingSource.EndEdit();
+      this.tableAdapterManager.UpdateAll(this.projetoFinalDataSetGeral);
+
+    }
+
+    private void BindingNavigatorAddNewItem_Click(object sender, EventArgs e) {
+      if (this.Validate()) {
+        this.eMPRESA1DataGridView.EndEdit();
+        this.tableAdapterManager.UpdateAll(this.projetoFinalDataSetGeral);
+      }
     }
   }
 }

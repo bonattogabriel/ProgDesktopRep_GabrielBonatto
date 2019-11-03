@@ -26,9 +26,9 @@
       this.components = new System.ComponentModel.Container();
       this.button1 = new System.Windows.Forms.Button();
       this.dataGridView1 = new System.Windows.Forms.DataGridView();
-      this.projetoFinalDataSet = new GabrielBonatto_MacxRoberto_ProjetoFinal.ProjetoFinalDataSet();
+      this.projetoFinalDataSet = new GabrielBonatto_MacxRoberto_ProjetoFinal.ProjetoFinalDataSetGeral();
       this.sIMULACOESBindingSource = new System.Windows.Forms.BindingSource(this.components);
-      this.sIMULACOESTableAdapter = new GabrielBonatto_MacxRoberto_ProjetoFinal.ProjetoFinalDataSetTableAdapters.SIMULACOESTableAdapter();
+      this.sIMULACOESTableAdapter = new GabrielBonatto_MacxRoberto_ProjetoFinal.ProjetoFinalDataSetGeralTableAdapters.SIMULACOESTableAdapter();
       this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.custoFixoTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.custoVarUnitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -172,9 +172,9 @@
     #endregion
     private System.Windows.Forms.Button button1;
     private System.Windows.Forms.DataGridView dataGridView1;
-    private ProjetoFinalDataSet projetoFinalDataSet;
+    private ProjetoFinalDataSetGeral projetoFinalDataSet;
     private System.Windows.Forms.BindingSource sIMULACOESBindingSource;
-    private ProjetoFinalDataSetTableAdapters.SIMULACOESTableAdapter sIMULACOESTableAdapter;
+    private ProjetoFinalDataSetGeralTableAdapters.SIMULACOESTableAdapter sIMULACOESTableAdapter;
     private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
     private System.Windows.Forms.DataGridViewTextBoxColumn custoFixoTotalDataGridViewTextBoxColumn;
     private System.Windows.Forms.DataGridViewTextBoxColumn custoVarUnitDataGridViewTextBoxColumn;

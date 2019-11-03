@@ -12,15 +12,10 @@ using System.Windows.Forms;
 
 namespace GabrielBonatto_MacxRoberto_ProjetoFinal.View {
   public partial class CadEmpresa : Form {
-    public CadEmpresa(Empresa empresa) {
+    public CadEmpresa() {
       InitializeComponent();
-      if(empresa != null) {
-        ED_EMPRESA.Text = empresa.EmpresaId.ToString();
-        ED_CNPJ.Text = empresa.CNPJ.ToString();
-        ED_RAZAO.Text = empresa.RazaoSocial;
-        ED_FONE.Text = empresa.Fone;
-      }
-      }
+
+    }
 
     private void Button1_Click(object sender, EventArgs e) {
 
@@ -31,11 +26,16 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.View {
     }
 
     private void CadEmpresa_Load(object sender, EventArgs e) {
-      // TODO: esta linha de código carrega dados na tabela 'projetoFinalDataSetCadEmpresa.EMPRESA'. Você pode movê-la ou removê-la conforme necessário.
-      this.eMPRESATableAdapter.Fill(this.projetoFinalDataSetCadEmpresa.EMPRESA);
+      // TODO: esta linha de código carrega dados na tabela 'projetoFinalDataSetGeral.EMPRESA'. Você pode movê-la ou removê-la conforme necessário.
+      this.eMPRESATableAdapter.Fill(this.projetoFinalDataSetGeral.EMPRESA);
+
+    }
+
+    private void EMPRESABindingNavigatorSaveItem_Click(object sender, EventArgs e) {
+      this.Validate();
+      this.eMPRESABindingSource.EndEdit();
+      this.tableAdapterManager.UpdateAll(this.projetoFinalDataSetGeral);
 
     }
   }
-
-    }
 }

@@ -51,20 +51,10 @@
     <Compile Include="Model\Simulacoes.cs" />
     <Compile Include="Model\Empresa.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="ProjetoFinalDataSet.Designer.cs">
+    <Compile Include="ProjetoFinalDataSetGeral.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ProjetoFinalDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ProjetoFinalDataSetCadEmpresa.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProjetoFinalDataSetCadEmpresa.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ProjetoFinalDataSetEmpresa.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProjetoFinalDataSetEmpresa.xsd</DependentUpon>
+      <DependentUpon>ProjetoFinalDataSetGeral.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\CalculosPE.cs" />
@@ -122,38 +112,16 @@
     <EmbeddedResource Include="View\TabelaSimulacoes.resx">
       <DependentUpon>TabelaSimulacoes.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="ProjetoFinalDataSet.xsc">
-      <DependentUpon>ProjetoFinalDataSet.xsd</DependentUpon>
+    <None Include="ProjetoFinalDataSetGeral.xsc">
+      <DependentUpon>ProjetoFinalDataSetGeral.xsd</DependentUpon>
     </None>
-    <None Include="ProjetoFinalDataSet.xsd">
+    <None Include="ProjetoFinalDataSetGeral.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ProjetoFinalDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>ProjetoFinalDataSetGeral.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="ProjetoFinalDataSet.xss">
-      <DependentUpon>ProjetoFinalDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ProjetoFinalDataSetCadEmpresa.xsc">
-      <DependentUpon>ProjetoFinalDataSetCadEmpresa.xsd</DependentUpon>
-    </None>
-    <None Include="ProjetoFinalDataSetCadEmpresa.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ProjetoFinalDataSetCadEmpresa.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ProjetoFinalDataSetCadEmpresa.xss">
-      <DependentUpon>ProjetoFinalDataSetCadEmpresa.xsd</DependentUpon>
-    </None>
-    <None Include="ProjetoFinalDataSetEmpresa.xsc">
-      <DependentUpon>ProjetoFinalDataSetEmpresa.xsd</DependentUpon>
-    </None>
-    <None Include="ProjetoFinalDataSetEmpresa.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ProjetoFinalDataSetEmpresa.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ProjetoFinalDataSetEmpresa.xss">
-      <DependentUpon>ProjetoFinalDataSetEmpresa.xsd</DependentUpon>
+    <None Include="ProjetoFinalDataSetGeral.xss">
+      <DependentUpon>ProjetoFinalDataSetGeral.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
