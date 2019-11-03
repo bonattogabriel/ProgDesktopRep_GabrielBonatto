@@ -5,16 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Model {
-  class Simulacoes {
-
-    private long? Id { get; set; }
-    private double CustoFixoTotal { get; set; }
-    private double CustoVarUnit { get; set; }
-    private double PrecoUnit { get; set; }
-    private int QtdeVendaInicial { get; set; }
-    private int QtdeVendaFinal { get; set; }
-    private int IncrementoUnit { get; set; }
-    private Empresa Empresa { get; set; }
+  public class Simulacoes {
+    public long? Id { get; set; }
+    public double CustoFixoTotal { get; set; }
+    public double CustoVarUnit { get; set; }
+    public double PrecoUnit { get; set; }
+    public int QtdeVendaInicial { get; set; }
+    public int QtdeVendaFinal { get; set; }
+    public int IncrementoUnit { get; set; }
+    public Empresa Empresa { get; set; }
 
     public Simulacoes(long? id,
       double custoFixoTotal,

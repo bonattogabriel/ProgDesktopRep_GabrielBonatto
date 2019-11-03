@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GabrielBonatto_MacxRoberto_ProjetoFinal.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.View {
   public partial class Main : Form {
     public Main() {
       InitializeComponent();
+      Simulacoes simulacoes = new Simulacoes().
+
     }
 
     private void Main_Load(object sender, EventArgs e) {

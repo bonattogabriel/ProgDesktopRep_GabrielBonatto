@@ -23,122 +23,165 @@
     /// the contents of this method with the code editor.
     /// </summary>
     private void InitializeComponent() {
-      this.label1 = new System.Windows.Forms.Label();
-      this.label2 = new System.Windows.Forms.Label();
-      this.label3 = new System.Windows.Forms.Label();
-      this.label4 = new System.Windows.Forms.Label();
-      this.ED_EMPRESA = new System.Windows.Forms.TextBox();
-      this.ED_RAZAO = new System.Windows.Forms.TextBox();
-      this.ED_FONE = new System.Windows.Forms.MaskedTextBox();
-      this.ED_CNPJ = new System.Windows.Forms.MaskedTextBox();
+      this.components = new System.ComponentModel.Container();
+      System.Windows.Forms.Label idLabel;
+      System.Windows.Forms.Label rAZAOSOCIALLabel;
+      System.Windows.Forms.Label cNPJLabel;
+      System.Windows.Forms.Label fONELabel;
+      this.button1 = new System.Windows.Forms.Button();
+      this.projetoFinalDataSetCadEmpresa = new GabrielBonatto_MacxRoberto_ProjetoFinal.ProjetoFinalDataSetCadEmpresa();
+      this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+      this.eMPRESABindingSource = new System.Windows.Forms.BindingSource(this.components);
+      this.eMPRESATableAdapter = new GabrielBonatto_MacxRoberto_ProjetoFinal.ProjetoFinalDataSetCadEmpresaTableAdapters.EMPRESATableAdapter();
+      this.tableAdapterManager = new GabrielBonatto_MacxRoberto_ProjetoFinal.ProjetoFinalDataSetCadEmpresaTableAdapters.TableAdapterManager();
+      this.idTextBox = new System.Windows.Forms.TextBox();
+      this.rAZAOSOCIALTextBox = new System.Windows.Forms.TextBox();
+      this.cNPJTextBox = new System.Windows.Forms.TextBox();
+      this.fONETextBox = new System.Windows.Forms.TextBox();
+      idLabel = new System.Windows.Forms.Label();
+      rAZAOSOCIALLabel = new System.Windows.Forms.Label();
+      cNPJLabel = new System.Windows.Forms.Label();
+      fONELabel = new System.Windows.Forms.Label();
+      ((System.ComponentModel.ISupportInitialize)(this.projetoFinalDataSetCadEmpresa)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.eMPRESABindingSource)).BeginInit();
       this.SuspendLayout();
       // 
-      // label1
+      // button1
       // 
-      this.label1.AutoSize = true;
-      this.label1.Location = new System.Drawing.Point(9, 32);
-      this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-      this.label1.Name = "label1";
-      this.label1.Size = new System.Drawing.Size(51, 13);
-      this.label1.TabIndex = 0;
-      this.label1.Text = "Empresa:";
+      this.button1.Location = new System.Drawing.Point(12, 129);
+      this.button1.Name = "button1";
+      this.button1.Size = new System.Drawing.Size(75, 23);
+      this.button1.TabIndex = 6;
+      this.button1.Text = "Salvar";
+      this.button1.UseVisualStyleBackColor = true;
+      this.button1.Click += new System.EventHandler(this.Button1_Click);
       // 
-      // label2
+      // projetoFinalDataSetCadEmpresa
       // 
-      this.label2.AutoSize = true;
-      this.label2.Location = new System.Drawing.Point(9, 55);
-      this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-      this.label2.Name = "label2";
-      this.label2.Size = new System.Drawing.Size(73, 13);
-      this.label2.TabIndex = 1;
-      this.label2.Text = "Razão Social:";
+      this.projetoFinalDataSetCadEmpresa.DataSetName = "ProjetoFinalDataSetCadEmpresa";
+      this.projetoFinalDataSetCadEmpresa.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
       // 
-      // label3
+      // eMPRESABindingSource
       // 
-      this.label3.AutoSize = true;
-      this.label3.Location = new System.Drawing.Point(9, 78);
-      this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-      this.label3.Name = "label3";
-      this.label3.Size = new System.Drawing.Size(37, 13);
-      this.label3.TabIndex = 2;
-      this.label3.Text = "CNPJ:";
+      this.eMPRESABindingSource.DataMember = "EMPRESA";
+      this.eMPRESABindingSource.DataSource = this.projetoFinalDataSetCadEmpresa;
       // 
-      // label4
+      // eMPRESATableAdapter
       // 
-      this.label4.AutoSize = true;
-      this.label4.Location = new System.Drawing.Point(9, 101);
-      this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-      this.label4.Name = "label4";
-      this.label4.Size = new System.Drawing.Size(34, 13);
-      this.label4.TabIndex = 3;
-      this.label4.Text = "Fone:";
+      this.eMPRESATableAdapter.ClearBeforeFill = true;
       // 
-      // ED_EMPRESA
+      // tableAdapterManager
       // 
-      this.ED_EMPRESA.Location = new System.Drawing.Point(87, 32);
-      this.ED_EMPRESA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-      this.ED_EMPRESA.Name = "ED_EMPRESA";
-      this.ED_EMPRESA.ReadOnly = true;
-      this.ED_EMPRESA.Size = new System.Drawing.Size(76, 20);
-      this.ED_EMPRESA.TabIndex = 1;
+      this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+      this.tableAdapterManager.EMPRESATableAdapter = this.eMPRESATableAdapter;
+      this.tableAdapterManager.UpdateOrder = GabrielBonatto_MacxRoberto_ProjetoFinal.ProjetoFinalDataSetCadEmpresaTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
       // 
-      // ED_RAZAO
+      // idLabel
       // 
-      this.ED_RAZAO.Location = new System.Drawing.Point(87, 55);
-      this.ED_RAZAO.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-      this.ED_RAZAO.MaxLength = 300;
-      this.ED_RAZAO.Name = "ED_RAZAO";
-      this.ED_RAZAO.Size = new System.Drawing.Size(344, 20);
-      this.ED_RAZAO.TabIndex = 1;
+      idLabel.AutoSize = true;
+      idLabel.Location = new System.Drawing.Point(12, 9);
+      idLabel.Name = "idLabel";
+      idLabel.Size = new System.Drawing.Size(19, 13);
+      idLabel.TabIndex = 6;
+      idLabel.Text = "Id:";
       // 
-      // ED_FONE
+      // idTextBox
       // 
-      this.ED_FONE.Location = new System.Drawing.Point(87, 101);
-      this.ED_FONE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-      this.ED_FONE.Mask = "(999) 00000-0000";
-      this.ED_FONE.Name = "ED_FONE";
-      this.ED_FONE.Size = new System.Drawing.Size(344, 20);
-      this.ED_FONE.TabIndex = 4;
+      this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPRESABindingSource, "Id", true));
+      this.idTextBox.Location = new System.Drawing.Point(103, 6);
+      this.idTextBox.Name = "idTextBox";
+      this.idTextBox.ReadOnly = true;
+      this.idTextBox.Size = new System.Drawing.Size(315, 20);
+      this.idTextBox.TabIndex = 7;
       // 
-      // ED_CNPJ
+      // rAZAOSOCIALLabel
       // 
-      this.ED_CNPJ.Location = new System.Drawing.Point(87, 78);
-      this.ED_CNPJ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-      this.ED_CNPJ.Mask = "99.999.999/9999-99";
-      this.ED_CNPJ.Name = "ED_CNPJ";
-      this.ED_CNPJ.Size = new System.Drawing.Size(344, 20);
-      this.ED_CNPJ.TabIndex = 5;
+      rAZAOSOCIALLabel.AutoSize = true;
+      rAZAOSOCIALLabel.Location = new System.Drawing.Point(12, 35);
+      rAZAOSOCIALLabel.Name = "rAZAOSOCIALLabel";
+      rAZAOSOCIALLabel.Size = new System.Drawing.Size(85, 13);
+      rAZAOSOCIALLabel.TabIndex = 8;
+      rAZAOSOCIALLabel.Text = "RAZAOSOCIAL:";
+      // 
+      // rAZAOSOCIALTextBox
+      // 
+      this.rAZAOSOCIALTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPRESABindingSource, "RAZAOSOCIAL", true));
+      this.rAZAOSOCIALTextBox.Location = new System.Drawing.Point(103, 32);
+      this.rAZAOSOCIALTextBox.Name = "rAZAOSOCIALTextBox";
+      this.rAZAOSOCIALTextBox.Size = new System.Drawing.Size(315, 20);
+      this.rAZAOSOCIALTextBox.TabIndex = 9;
+      // 
+      // cNPJLabel
+      // 
+      cNPJLabel.AutoSize = true;
+      cNPJLabel.Location = new System.Drawing.Point(12, 61);
+      cNPJLabel.Name = "cNPJLabel";
+      cNPJLabel.Size = new System.Drawing.Size(37, 13);
+      cNPJLabel.TabIndex = 10;
+      cNPJLabel.Text = "CNPJ:";
+      // 
+      // cNPJTextBox
+      // 
+      this.cNPJTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPRESABindingSource, "CNPJ", true));
+      this.cNPJTextBox.Location = new System.Drawing.Point(103, 58);
+      this.cNPJTextBox.Name = "cNPJTextBox";
+      this.cNPJTextBox.Size = new System.Drawing.Size(315, 20);
+      this.cNPJTextBox.TabIndex = 11;
+      // 
+      // fONELabel
+      // 
+      fONELabel.AutoSize = true;
+      fONELabel.Location = new System.Drawing.Point(12, 87);
+      fONELabel.Name = "fONELabel";
+      fONELabel.Size = new System.Drawing.Size(39, 13);
+      fONELabel.TabIndex = 12;
+      fONELabel.Text = "FONE:";
+      // 
+      // fONETextBox
+      // 
+      this.fONETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPRESABindingSource, "FONE", true));
+      this.fONETextBox.Location = new System.Drawing.Point(103, 84);
+      this.fONETextBox.Name = "fONETextBox";
+      this.fONETextBox.Size = new System.Drawing.Size(315, 20);
+      this.fONETextBox.TabIndex = 13;
       // 
       // CadEmpresa
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(442, 159);
-      this.Controls.Add(this.ED_CNPJ);
-      this.Controls.Add(this.ED_FONE);
-      this.Controls.Add(this.ED_RAZAO);
-      this.Controls.Add(this.ED_EMPRESA);
-      this.Controls.Add(this.label4);
-      this.Controls.Add(this.label3);
-      this.Controls.Add(this.label2);
-      this.Controls.Add(this.label1);
+      this.ClientSize = new System.Drawing.Size(442, 166);
+      this.Controls.Add(idLabel);
+      this.Controls.Add(this.idTextBox);
+      this.Controls.Add(rAZAOSOCIALLabel);
+      this.Controls.Add(this.rAZAOSOCIALTextBox);
+      this.Controls.Add(cNPJLabel);
+      this.Controls.Add(this.cNPJTextBox);
+      this.Controls.Add(fONELabel);
+      this.Controls.Add(this.fONETextBox);
+      this.Controls.Add(this.button1);
       this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
       this.Name = "CadEmpresa";
       this.Text = "Empresa";
+      this.Load += new System.EventHandler(this.CadEmpresa_Load);
+      ((System.ComponentModel.ISupportInitialize)(this.projetoFinalDataSetCadEmpresa)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.eMPRESABindingSource)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
 
     }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox ED_EMPRESA;
-        private System.Windows.Forms.TextBox ED_RAZAO;
-        private System.Windows.Forms.MaskedTextBox ED_FONE;
-        private System.Windows.Forms.MaskedTextBox ED_CNPJ;
-    }
+    private System.Windows.Forms.Button button1;
+    private ProjetoFinalDataSetCadEmpresa projetoFinalDataSetCadEmpresa;
+    private System.Windows.Forms.BindingSource bindingSource1;
+    private System.Windows.Forms.BindingSource eMPRESABindingSource;
+    private ProjetoFinalDataSetCadEmpresaTableAdapters.EMPRESATableAdapter eMPRESATableAdapter;
+    private ProjetoFinalDataSetCadEmpresaTableAdapters.TableAdapterManager tableAdapterManager;
+    private System.Windows.Forms.TextBox idTextBox;
+    private System.Windows.Forms.TextBox rAZAOSOCIALTextBox;
+    private System.Windows.Forms.TextBox cNPJTextBox;
+    private System.Windows.Forms.TextBox fONETextBox;
+  }
 }
