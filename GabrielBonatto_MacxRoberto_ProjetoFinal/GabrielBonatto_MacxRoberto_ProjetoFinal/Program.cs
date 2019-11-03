@@ -12,7 +12,7 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal {
     static void Main() {
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new CadEmpresa());
+      Application.Run(new Main());
     }
   }
 }

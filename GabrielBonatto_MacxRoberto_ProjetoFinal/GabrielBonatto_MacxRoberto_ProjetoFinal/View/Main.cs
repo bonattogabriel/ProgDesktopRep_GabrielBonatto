@@ -13,5 +13,21 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.View {
     public Main() {
       InitializeComponent();
     }
+
+    private void Main_Load(object sender, EventArgs e) {
+
+    }
+
+    private void EmpresaToolStripMenuItem_Click(object sender, EventArgs e) {
+      new CadEmpresa().Show();
+    }
+
+    private void SimulaçõesToolStripMenuItem_Click(object sender, EventArgs e) {
+      new CadSimulacoes().Show();
+    }
+
+    private void VisualizarTabelaToolStripMenuItem_Click(object sender, EventArgs e) {
+      new TabelaSimulacoes().Show();
+    }
   }
 }

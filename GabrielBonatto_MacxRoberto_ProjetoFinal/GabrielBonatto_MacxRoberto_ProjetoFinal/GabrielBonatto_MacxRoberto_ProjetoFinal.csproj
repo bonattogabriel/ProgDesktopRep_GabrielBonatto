@@ -70,6 +70,12 @@
     <Compile Include="View\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\TabelaSimulacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TabelaSimulacoes.Designer.cs">
+      <DependentUpon>TabelaSimulacoes.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -79,8 +85,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\CadEmpresa.resx">
+      <DependentUpon>CadEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\CadSimulacoes.resx">
       <DependentUpon>CadSimulacoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TabelaSimulacoes.resx">
+      <DependentUpon>TabelaSimulacoes.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
