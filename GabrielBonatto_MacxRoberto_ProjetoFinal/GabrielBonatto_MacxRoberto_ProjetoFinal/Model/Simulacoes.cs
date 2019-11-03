@@ -34,23 +34,6 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Model {
       Empresa = empresa ?? throw new ArgumentNullException(nameof(empresa));
     }
 
-    public Double CalcularCustoTotal() {
-      return CustoFixoTotal + (CustoVarUnit * QtdeVendaFinal);
-    }
-
-    public Double CalcularTotalDeVendas() {
-      return PrecoUnit * QtdeVendaFinal;
-    }
-
-    public Double CalcularCustoUnit()
-    {
-      return CalcularCustoTotal() / QtdeVendaFinal;
-    }
-
-    public Double CalcularGanhoPerda() {
-      return CalcularTotalDeVendas() - CalcularCustoTotal();
-    }
-
     public override bool Equals(object obj) {
       return obj is Simulacoes simulacoes &&
              EqualityComparer<long?>.Default.Equals(Id, simulacoes.Id) &&

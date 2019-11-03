@@ -27,6 +27,26 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Service
       return simulacoes.CustoFixoTotal + (simulacoes.CustoVarUnit * CalcularEquilibrio());
     }
 
+    public Double CalcularCustoTotal()
+    {
+      return simulacoes.CustoFixoTotal + (simulacoes.CustoVarUnit * simulacoes.QtdeVendaFinal);
+    }
+
+    public Double CalcularTotalDeVendas()
+    {
+      return simulacoes.PrecoUnit * simulacoes.QtdeVendaFinal;
+    }
+
+    public Double CalcularCustoUnit()
+    {
+      return CalcularCustoTotal() / simulacoes.QtdeVendaFinal;
+    }
+
+    public Double CalcularGanhoPerda()
+    {
+      return CalcularTotalDeVendas() - CalcularCustoTotal();
+    }
+
 
 
   }
