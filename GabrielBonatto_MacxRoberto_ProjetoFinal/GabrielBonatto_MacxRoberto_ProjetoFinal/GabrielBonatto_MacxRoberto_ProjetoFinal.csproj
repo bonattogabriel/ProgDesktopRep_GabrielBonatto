@@ -51,6 +51,9 @@
     <Compile Include="Model\Simulacoes.cs" />
     <Compile Include="Model\Empresa.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ProjetoFinalDataSetGeral.cs">
+      <DependentUpon>ProjetoFinalDataSetGeral.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ProjetoFinalDataSetGeral.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
