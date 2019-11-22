@@ -51,6 +51,11 @@
     <Compile Include="Model\Simulacoes.cs" />
     <Compile Include="Model\Empresa.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ProjetoFinalDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjetoFinalDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ProjetoFinalDataSetGeral.cs">
       <DependentUpon>ProjetoFinalDataSetGeral.xsd</DependentUpon>
     </Compile>
@@ -115,6 +120,17 @@
     <EmbeddedResource Include="View\TabelaSimulacoes.resx">
       <DependentUpon>TabelaSimulacoes.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ProjetoFinalDataSet.xsc">
+      <DependentUpon>ProjetoFinalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProjetoFinalDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjetoFinalDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProjetoFinalDataSet.xss">
+      <DependentUpon>ProjetoFinalDataSet.xsd</DependentUpon>
+    </None>
     <None Include="ProjetoFinalDataSetGeral.xsc">
       <DependentUpon>ProjetoFinalDataSetGeral.xsd</DependentUpon>
     </None>
