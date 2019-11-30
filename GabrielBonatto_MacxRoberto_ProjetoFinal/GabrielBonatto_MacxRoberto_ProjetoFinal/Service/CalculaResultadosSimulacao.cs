@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Service
 {
+  /// <summary>
+  /// Responsabilidade da classe é reaclizar o calculo 
+  /// do resultado da simulaçao recebida.
+  /// </summary>
   class CalculaResultadosSimulacao
   {
     private Simulacoes simulacoes;

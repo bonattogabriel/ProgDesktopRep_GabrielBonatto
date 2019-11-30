@@ -7,6 +7,13 @@ using System.Threading.Tasks;
 
 namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Service
 {
+  /// <summary>
+  /// Nao esta completamente implementada
+  /// - foi adicionado o calculo dos valores para um 
+  /// novo item do resultado da simulaçao com base nos 
+  /// dados da simulaçao e no resultado atual da simulaçao
+  /// - Falta o calculo de ponto de equilibrio.
+  /// </summary>
   class CalculosPe
   {
     private Simulacoes simulacoes;

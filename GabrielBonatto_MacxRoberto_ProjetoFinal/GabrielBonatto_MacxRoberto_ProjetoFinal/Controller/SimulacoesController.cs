@@ -7,5 +7,9 @@ using System.Threading.Tasks;
 namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Controller {
   class SimulacoesController {
 
+    //CalculaResultadosSimulacao(
+    //  new Simulacoes()
+    //).CalcularListaResultados();
+
   }
 }

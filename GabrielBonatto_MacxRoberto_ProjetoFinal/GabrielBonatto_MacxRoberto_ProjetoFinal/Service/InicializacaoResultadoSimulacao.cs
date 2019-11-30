@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Service
 {
+  /// <summary>
+  /// Tem como responsabilidade prover uma instancia de um resultado 
+  /// apartir dos dados iniciais de uma simulação.
+  /// </summary>
   class InicializacaoResultadoSimulacao
   {
     private Simulacoes simulacoes;
