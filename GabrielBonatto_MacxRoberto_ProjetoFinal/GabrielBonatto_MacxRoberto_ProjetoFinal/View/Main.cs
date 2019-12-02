@@ -21,7 +21,7 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.View {
     }
 
     private void EmpresaToolStripMenuItem_Click(object sender, EventArgs e) {
-      new CadEmpresa().Show();
+      new TabelaEmpresa().Show();
     }
 
     private void SimulaçõesToolStripMenuItem_Click(object sender, EventArgs e) {
@@ -29,7 +29,7 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.View {
     }
 
     private void VisualizarTabelaToolStripMenuItem_Click(object sender, EventArgs e) {
-      new PontoDeEquilibrio(new List<ResultadoSimulacao>()).Show();
+      new TabelaSimulacoes().Show();
     }
   }
 }
