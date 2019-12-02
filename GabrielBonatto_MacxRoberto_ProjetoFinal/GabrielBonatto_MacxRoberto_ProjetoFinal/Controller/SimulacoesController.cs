@@ -5,7 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Controller {
-  public class SimulacoesController {
-    DatabaseConnection objConn = new DatabaseConnection();
+  class SimulacoesController {
+
+    //CalculaResultadosSimulacao(
+    //  new Simulacoes()
+    //).CalcularListaResultados();
+
   }
 }

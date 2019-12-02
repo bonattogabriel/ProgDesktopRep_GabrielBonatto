@@ -7,44 +7,69 @@ using System.Threading.Tasks;
 
 namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Service
 {
+  /// <summary>
+  /// Nao esta completamente implementada
+  /// - foi adicionado o calculo dos valores para um 
+  /// novo item do resultado da simulaçao com base nos 
+  /// dados da simulaçao e no resultado atual da simulaçao
+  /// - Falta o calculo de ponto de equilibrio.
+  /// </summary>
   class CalculosPe
   {
     private Simulacoes simulacoes;
+    private ResultadoSimulacao resultadoAtual;
 
     public CalculosPe(Simulacoes simulacoes) {
       this.simulacoes = simulacoes;
     }
 
-    public Double CalcularEquilibrio() {
-      return simulacoes.CustoFixoTotal + (simulacoes.PrecoUnit - simulacoes.CustoVarUnit );
+    public ResultadoSimulacao CalculularNovoResultado(ResultadoSimulacao resultadoAtual)
+    {
+      this.resultadoAtual = resultadoAtual;
+      return new ResultadoSimulacao(CalcularQuantidadeAtual(),
+                                    CalcularCustoTotal(),
+                                    CalcularTotalDeVendas(),
+                                    CalcularGanhoPerda(),
+                                    CalcularCustoUnitario() );
+    }
+ 
+    private int CalcularQuantidadeAtual()
+    {
+      return resultadoAtual.Quantidade + simulacoes.IncrementoUnit;
     }
 
-    public Double CalcularReceitaEquilibrio() {
+    private Double CalcularCustoTotal()
+    {
+      return simulacoes.CustoFixoTotal + (simulacoes.CustoVarUnit * CalcularQuantidadeAtual());
+    }
+
+    private Double CalcularTotalDeVendas()
+    {
+      return simulacoes.PrecoUnit * CalcularQuantidadeAtual();
+    }
+
+    private Double CalcularGanhoPerda()
+    {
+      return CalcularTotalDeVendas() - simulacoes.CustoFixoTotal;
+    }
+
+    private Double CalcularCustoUnitario()
+    {
+      return simulacoes.CustoFixoTotal / CalcularQuantidadeAtual();
+    }
+
+
+    // nao estao sendo usadas pois ainda n estamos controlando o PE
+    private Double CalcularEquilibrio() {
+      return simulacoes.CustoFixoTotal + (simulacoes.PrecoUnit - resultadoAtual.Quantidade );
+    }
+
+    private Double CalcularReceitaEquilibrio() {
       return simulacoes.PrecoUnit * CalcularEquilibrio();
     }
 
-    public Double CalcularCustoEquilibrio() {
+    private Double CalcularCustoEquilibrio() {
       return simulacoes.CustoFixoTotal + (simulacoes.CustoVarUnit * CalcularEquilibrio());
-    }
-
-    public Double CalcularCustoTotal()
-    {
-      return simulacoes.CustoFixoTotal + (simulacoes.CustoVarUnit * simulacoes.QtdeVendaFinal);
-    }
-
-    public Double CalcularTotalDeVendas()
-    {
-      return simulacoes.PrecoUnit * simulacoes.QtdeVendaFinal;
-    }
-
-    public Double CalcularCustoUnit()
-    {
-      return CalcularCustoTotal() / simulacoes.QtdeVendaFinal;
-    }
-
-    public Double CalcularGanhoPerda()
-    {
-      return CalcularTotalDeVendas() - CalcularCustoTotal();
     }
 
   }
