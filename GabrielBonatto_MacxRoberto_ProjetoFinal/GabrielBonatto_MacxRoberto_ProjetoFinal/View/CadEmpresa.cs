@@ -1,6 +1,4 @@
-﻿using GabrielBonatto_MacxRoberto_ProjetoFinal.Controller;
-using GabrielBonatto_MacxRoberto_ProjetoFinal.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,28 +12,34 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.View {
   public partial class CadEmpresa : Form {
     public CadEmpresa() {
       InitializeComponent();
+    }
+
+    private void TabelaEmpresa_Load(object sender, EventArgs e) {
+      this.eMPRESA1TableAdapter.Fill(this.projetoFinalDataSetGeral.EMPRESA1);
 
     }
 
-    private void Button1_Click(object sender, EventArgs e) {
-
-    }
-
-    private void BindingSource1_CurrentChanged(object sender, EventArgs e) {
-
-    }
-
-    private void CadEmpresa_Load(object sender, EventArgs e) {
-      // TODO: esta linha de código carrega dados na tabela 'projetoFinalDataSetGeral.EMPRESA'. Você pode movê-la ou removê-la conforme necessário.
-      this.eMPRESATableAdapter.Fill(this.projetoFinalDataSetGeral.EMPRESA);
-
-    }
-
-    private void EMPRESABindingNavigatorSaveItem_Click(object sender, EventArgs e) {
+    private void EMPRESA1BindingNavigatorSaveItem_Click(object sender, EventArgs e) {
       this.Validate();
-      this.eMPRESABindingSource.EndEdit();
+      this.eMPRESA1BindingSource.EndEdit();
       this.tableAdapterManager.UpdateAll(this.projetoFinalDataSetGeral);
 
+    }
+
+    private void BindingNavigatorAddNewItem_Click(object sender, EventArgs e) {
+      if (this.Validate()) {
+        this.eMPRESA1DataGridView.EndEdit();
+        this.tableAdapterManager.UpdateAll(this.projetoFinalDataSetGeral);
+      }
+    }
+
+    private void BindingNavigatorDeleteItem_Click(object sender, EventArgs e) {
+      if (this.eMPRESA1BindingNavigator.BindingSource.Current != null) {
+        this.Validate();
+        this.eMPRESA1BindingNavigator.BindingSource.RemoveFilter();
+        this.eMPRESA1BindingSource.EndEdit();
+        this.tableAdapterManager.UpdateAll(this.projetoFinalDataSetGeral);
+      }
     }
   }
 }

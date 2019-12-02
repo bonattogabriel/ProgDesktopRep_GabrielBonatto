@@ -25,80 +25,64 @@
     private void InitializeComponent() {
       this.components = new System.ComponentModel.Container();
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadEmpresa));
-      System.Windows.Forms.Label idLabel;
-      System.Windows.Forms.Label rAZAOSOCIALLabel;
-      System.Windows.Forms.Label cNPJLabel;
-      System.Windows.Forms.Label fONELabel;
-      this.button1 = new System.Windows.Forms.Button();
       this.projetoFinalDataSetGeral = new GabrielBonatto_MacxRoberto_ProjetoFinal.ProjetoFinalDataSetGeral();
-      this.eMPRESABindingSource = new System.Windows.Forms.BindingSource(this.components);
-      this.eMPRESATableAdapter = new GabrielBonatto_MacxRoberto_ProjetoFinal.ProjetoFinalDataSetGeralTableAdapters.EMPRESATableAdapter();
+      this.eMPRESA1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+      this.eMPRESA1TableAdapter = new GabrielBonatto_MacxRoberto_ProjetoFinal.ProjetoFinalDataSetGeralTableAdapters.EMPRESA1TableAdapter();
       this.tableAdapterManager = new GabrielBonatto_MacxRoberto_ProjetoFinal.ProjetoFinalDataSetGeralTableAdapters.TableAdapterManager();
-      this.eMPRESABindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+      this.eMPRESA1BindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+      this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+      this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+      this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
       this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
       this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
       this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
       this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-      this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
       this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
       this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
       this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
       this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-      this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-      this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-      this.eMPRESABindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-      this.idTextBox = new System.Windows.Forms.TextBox();
-      this.rAZAOSOCIALTextBox = new System.Windows.Forms.TextBox();
-      this.cNPJTextBox = new System.Windows.Forms.TextBox();
-      this.fONETextBox = new System.Windows.Forms.TextBox();
-      idLabel = new System.Windows.Forms.Label();
-      rAZAOSOCIALLabel = new System.Windows.Forms.Label();
-      cNPJLabel = new System.Windows.Forms.Label();
-      fONELabel = new System.Windows.Forms.Label();
+      this.eMPRESA1BindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+      this.eMPRESA1DataGridView = new System.Windows.Forms.DataGridView();
+      this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+      this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+      this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+      this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
       ((System.ComponentModel.ISupportInitialize)(this.projetoFinalDataSetGeral)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.eMPRESABindingSource)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.eMPRESABindingNavigator)).BeginInit();
-      this.eMPRESABindingNavigator.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.eMPRESA1BindingSource)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.eMPRESA1BindingNavigator)).BeginInit();
+      this.eMPRESA1BindingNavigator.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.eMPRESA1DataGridView)).BeginInit();
       this.SuspendLayout();
-      // 
-      // button1
-      // 
-      this.button1.Location = new System.Drawing.Point(12, 158);
-      this.button1.Name = "button1";
-      this.button1.Size = new System.Drawing.Size(75, 23);
-      this.button1.TabIndex = 6;
-      this.button1.Text = "Salvar";
-      this.button1.UseVisualStyleBackColor = true;
-      this.button1.Click += new System.EventHandler(this.Button1_Click);
       // 
       // projetoFinalDataSetGeral
       // 
       this.projetoFinalDataSetGeral.DataSetName = "ProjetoFinalDataSetGeral";
       this.projetoFinalDataSetGeral.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
       // 
-      // eMPRESABindingSource
+      // eMPRESA1BindingSource
       // 
-      this.eMPRESABindingSource.DataMember = "EMPRESA";
-      this.eMPRESABindingSource.DataSource = this.projetoFinalDataSetGeral;
+      this.eMPRESA1BindingSource.DataMember = "EMPRESA1";
+      this.eMPRESA1BindingSource.DataSource = this.projetoFinalDataSetGeral;
       // 
-      // eMPRESATableAdapter
+      // eMPRESA1TableAdapter
       // 
-      this.eMPRESATableAdapter.ClearBeforeFill = true;
+      this.eMPRESA1TableAdapter.ClearBeforeFill = true;
       // 
       // tableAdapterManager
       // 
       this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-      this.tableAdapterManager.EMPRESATableAdapter = this.eMPRESATableAdapter;
+      this.tableAdapterManager.EMPRESA1TableAdapter = this.eMPRESA1TableAdapter;
+      this.tableAdapterManager.EMPRESATableAdapter = null;
       this.tableAdapterManager.SIMULACOESTableAdapter = null;
       this.tableAdapterManager.UpdateOrder = GabrielBonatto_MacxRoberto_ProjetoFinal.ProjetoFinalDataSetGeralTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
       // 
-      // eMPRESABindingNavigator
+      // eMPRESA1BindingNavigator
       // 
-      this.eMPRESABindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-      this.eMPRESABindingNavigator.BindingSource = this.eMPRESABindingSource;
-      this.eMPRESABindingNavigator.CountItem = this.bindingNavigatorCountItem;
-      this.eMPRESABindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-      this.eMPRESABindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+      this.eMPRESA1BindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+      this.eMPRESA1BindingNavigator.BindingSource = this.eMPRESA1BindingSource;
+      this.eMPRESA1BindingNavigator.CountItem = this.bindingNavigatorCountItem;
+      this.eMPRESA1BindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+      this.eMPRESA1BindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -110,17 +94,44 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.eMPRESABindingNavigatorSaveItem});
-      this.eMPRESABindingNavigator.Location = new System.Drawing.Point(0, 0);
-      this.eMPRESABindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-      this.eMPRESABindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-      this.eMPRESABindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-      this.eMPRESABindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-      this.eMPRESABindingNavigator.Name = "eMPRESABindingNavigator";
-      this.eMPRESABindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-      this.eMPRESABindingNavigator.Size = new System.Drawing.Size(442, 25);
-      this.eMPRESABindingNavigator.TabIndex = 7;
-      this.eMPRESABindingNavigator.Text = "bindingNavigator1";
+            this.eMPRESA1BindingNavigatorSaveItem});
+      this.eMPRESA1BindingNavigator.Location = new System.Drawing.Point(0, 0);
+      this.eMPRESA1BindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+      this.eMPRESA1BindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+      this.eMPRESA1BindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+      this.eMPRESA1BindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+      this.eMPRESA1BindingNavigator.Name = "eMPRESA1BindingNavigator";
+      this.eMPRESA1BindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+      this.eMPRESA1BindingNavigator.Size = new System.Drawing.Size(448, 25);
+      this.eMPRESA1BindingNavigator.TabIndex = 0;
+      this.eMPRESA1BindingNavigator.Text = "bindingNavigator1";
+      // 
+      // bindingNavigatorAddNewItem
+      // 
+      this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+      this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+      this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+      this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+      this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+      this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+      this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.BindingNavigatorAddNewItem_Click);
+      // 
+      // bindingNavigatorCountItem
+      // 
+      this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+      this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+      this.bindingNavigatorCountItem.Text = "de {0}";
+      this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
+      // 
+      // bindingNavigatorDeleteItem
+      // 
+      this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+      this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+      this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+      this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+      this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+      this.bindingNavigatorDeleteItem.Text = "Excluir";
+      this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.BindingNavigatorDeleteItem_Click);
       // 
       // bindingNavigatorMoveFirstItem
       // 
@@ -149,22 +160,16 @@
       // 
       this.bindingNavigatorPositionItem.AccessibleName = "Posição";
       this.bindingNavigatorPositionItem.AutoSize = false;
+      this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
       this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
       this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
       this.bindingNavigatorPositionItem.Text = "0";
       this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
       // 
-      // bindingNavigatorCountItem
-      // 
-      this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-      this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 15);
-      this.bindingNavigatorCountItem.Text = "de {0}";
-      this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
-      // 
       // bindingNavigatorSeparator1
       // 
-      this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-      this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+      this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+      this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
       // 
       // bindingNavigatorMoveNextItem
       // 
@@ -172,7 +177,7 @@
       this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
       this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
       this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-      this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+      this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
       this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
       // 
       // bindingNavigatorMoveLastItem
@@ -181,145 +186,91 @@
       this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
       this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
       this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-      this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+      this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
       this.bindingNavigatorMoveLastItem.Text = "Mover último";
       // 
       // bindingNavigatorSeparator2
       // 
-      this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-      this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
+      this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+      this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
       // 
-      // bindingNavigatorAddNewItem
+      // eMPRESA1BindingNavigatorSaveItem
       // 
-      this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-      this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-      this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-      this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-      this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-      this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+      this.eMPRESA1BindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+      this.eMPRESA1BindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("eMPRESA1BindingNavigatorSaveItem.Image")));
+      this.eMPRESA1BindingNavigatorSaveItem.Name = "eMPRESA1BindingNavigatorSaveItem";
+      this.eMPRESA1BindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+      this.eMPRESA1BindingNavigatorSaveItem.Text = "Salvar Dados";
+      this.eMPRESA1BindingNavigatorSaveItem.Click += new System.EventHandler(this.EMPRESA1BindingNavigatorSaveItem_Click);
       // 
-      // bindingNavigatorDeleteItem
+      // eMPRESA1DataGridView
       // 
-      this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-      this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-      this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-      this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-      this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-      this.bindingNavigatorDeleteItem.Text = "Excluir";
+      this.eMPRESA1DataGridView.AutoGenerateColumns = false;
+      this.eMPRESA1DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+      this.eMPRESA1DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+      this.eMPRESA1DataGridView.DataSource = this.eMPRESA1BindingSource;
+      this.eMPRESA1DataGridView.Location = new System.Drawing.Point(0, 28);
+      this.eMPRESA1DataGridView.Name = "eMPRESA1DataGridView";
+      this.eMPRESA1DataGridView.Size = new System.Drawing.Size(500, 284);
+      this.eMPRESA1DataGridView.TabIndex = 1;
       // 
-      // eMPRESABindingNavigatorSaveItem
+      // dataGridViewTextBoxColumn1
       // 
-      this.eMPRESABindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-      this.eMPRESABindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("eMPRESABindingNavigatorSaveItem.Image")));
-      this.eMPRESABindingNavigatorSaveItem.Name = "eMPRESABindingNavigatorSaveItem";
-      this.eMPRESABindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
-      this.eMPRESABindingNavigatorSaveItem.Text = "Salvar Dados";
-      this.eMPRESABindingNavigatorSaveItem.Click += new System.EventHandler(this.EMPRESABindingNavigatorSaveItem_Click);
+      this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+      this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+      this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+      this.dataGridViewTextBoxColumn1.ReadOnly = true;
       // 
-      // idLabel
+      // dataGridViewTextBoxColumn2
       // 
-      idLabel.AutoSize = true;
-      idLabel.Location = new System.Drawing.Point(13, 42);
-      idLabel.Name = "idLabel";
-      idLabel.Size = new System.Drawing.Size(19, 13);
-      idLabel.TabIndex = 7;
-      idLabel.Text = "Id:";
+      this.dataGridViewTextBoxColumn2.DataPropertyName = "RAZAOSOCIAL";
+      this.dataGridViewTextBoxColumn2.HeaderText = "RAZAOSOCIAL";
+      this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
       // 
-      // idTextBox
+      // dataGridViewTextBoxColumn3
       // 
-      this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPRESABindingSource, "Id", true));
-      this.idTextBox.Location = new System.Drawing.Point(104, 39);
-      this.idTextBox.Name = "idTextBox";
-      this.idTextBox.Size = new System.Drawing.Size(100, 20);
-      this.idTextBox.TabIndex = 8;
+      this.dataGridViewTextBoxColumn3.DataPropertyName = "CNPJ";
+      this.dataGridViewTextBoxColumn3.HeaderText = "CNPJ";
+      this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
       // 
-      // rAZAOSOCIALLabel
+      // dataGridViewTextBoxColumn4
       // 
-      rAZAOSOCIALLabel.AutoSize = true;
-      rAZAOSOCIALLabel.Location = new System.Drawing.Point(13, 68);
-      rAZAOSOCIALLabel.Name = "rAZAOSOCIALLabel";
-      rAZAOSOCIALLabel.Size = new System.Drawing.Size(85, 13);
-      rAZAOSOCIALLabel.TabIndex = 9;
-      rAZAOSOCIALLabel.Text = "RAZAOSOCIAL:";
+      this.dataGridViewTextBoxColumn4.DataPropertyName = "FONE";
+      this.dataGridViewTextBoxColumn4.HeaderText = "FONE";
+      this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
       // 
-      // rAZAOSOCIALTextBox
-      // 
-      this.rAZAOSOCIALTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPRESABindingSource, "RAZAOSOCIAL", true));
-      this.rAZAOSOCIALTextBox.Location = new System.Drawing.Point(104, 65);
-      this.rAZAOSOCIALTextBox.Name = "rAZAOSOCIALTextBox";
-      this.rAZAOSOCIALTextBox.Size = new System.Drawing.Size(100, 20);
-      this.rAZAOSOCIALTextBox.TabIndex = 10;
-      // 
-      // cNPJLabel
-      // 
-      cNPJLabel.AutoSize = true;
-      cNPJLabel.Location = new System.Drawing.Point(13, 94);
-      cNPJLabel.Name = "cNPJLabel";
-      cNPJLabel.Size = new System.Drawing.Size(37, 13);
-      cNPJLabel.TabIndex = 11;
-      cNPJLabel.Text = "CNPJ:";
-      // 
-      // cNPJTextBox
-      // 
-      this.cNPJTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPRESABindingSource, "CNPJ", true));
-      this.cNPJTextBox.Location = new System.Drawing.Point(104, 91);
-      this.cNPJTextBox.Name = "cNPJTextBox";
-      this.cNPJTextBox.Size = new System.Drawing.Size(100, 20);
-      this.cNPJTextBox.TabIndex = 12;
-      // 
-      // fONELabel
-      // 
-      fONELabel.AutoSize = true;
-      fONELabel.Location = new System.Drawing.Point(13, 120);
-      fONELabel.Name = "fONELabel";
-      fONELabel.Size = new System.Drawing.Size(39, 13);
-      fONELabel.TabIndex = 13;
-      fONELabel.Text = "FONE:";
-      // 
-      // fONETextBox
-      // 
-      this.fONETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPRESABindingSource, "FONE", true));
-      this.fONETextBox.Location = new System.Drawing.Point(104, 117);
-      this.fONETextBox.Name = "fONETextBox";
-      this.fONETextBox.Size = new System.Drawing.Size(100, 20);
-      this.fONETextBox.TabIndex = 14;
-      // 
-      // CadEmpresa
+      // TabelaEmpresa
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(442, 216);
-      this.Controls.Add(idLabel);
-      this.Controls.Add(this.idTextBox);
-      this.Controls.Add(rAZAOSOCIALLabel);
-      this.Controls.Add(this.rAZAOSOCIALTextBox);
-      this.Controls.Add(cNPJLabel);
-      this.Controls.Add(this.cNPJTextBox);
-      this.Controls.Add(fONELabel);
-      this.Controls.Add(this.fONETextBox);
-      this.Controls.Add(this.eMPRESABindingNavigator);
-      this.Controls.Add(this.button1);
-      this.Margin = new System.Windows.Forms.Padding(2);
-      this.Name = "CadEmpresa";
-      this.Text = "Empresa";
-      this.Load += new System.EventHandler(this.CadEmpresa_Load);
+      this.ClientSize = new System.Drawing.Size(448, 318);
+      this.Controls.Add(this.eMPRESA1DataGridView);
+      this.Controls.Add(this.eMPRESA1BindingNavigator);
+      this.Name = "TabelaEmpresa";
+      this.Text = "TabelaEmpresa";
+      this.Load += new System.EventHandler(this.TabelaEmpresa_Load);
       ((System.ComponentModel.ISupportInitialize)(this.projetoFinalDataSetGeral)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.eMPRESABindingSource)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.eMPRESABindingNavigator)).EndInit();
-      this.eMPRESABindingNavigator.ResumeLayout(false);
-      this.eMPRESABindingNavigator.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.eMPRESA1BindingSource)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.eMPRESA1BindingNavigator)).EndInit();
+      this.eMPRESA1BindingNavigator.ResumeLayout(false);
+      this.eMPRESA1BindingNavigator.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.eMPRESA1DataGridView)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
 
     }
 
-        #endregion
-    private System.Windows.Forms.Button button1;
+    #endregion
+
     private ProjetoFinalDataSetGeral projetoFinalDataSetGeral;
-    private System.Windows.Forms.BindingSource eMPRESABindingSource;
-    private ProjetoFinalDataSetGeralTableAdapters.EMPRESATableAdapter eMPRESATableAdapter;
+    private System.Windows.Forms.BindingSource eMPRESA1BindingSource;
+    private ProjetoFinalDataSetGeralTableAdapters.EMPRESA1TableAdapter eMPRESA1TableAdapter;
     private ProjetoFinalDataSetGeralTableAdapters.TableAdapterManager tableAdapterManager;
-    private System.Windows.Forms.BindingNavigator eMPRESABindingNavigator;
+    private System.Windows.Forms.BindingNavigator eMPRESA1BindingNavigator;
     private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
     private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
     private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -331,10 +282,11 @@
     private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
     private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
     private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-    private System.Windows.Forms.ToolStripButton eMPRESABindingNavigatorSaveItem;
-    private System.Windows.Forms.TextBox idTextBox;
-    private System.Windows.Forms.TextBox rAZAOSOCIALTextBox;
-    private System.Windows.Forms.TextBox cNPJTextBox;
-    private System.Windows.Forms.TextBox fONETextBox;
+    private System.Windows.Forms.ToolStripButton eMPRESA1BindingNavigatorSaveItem;
+    private System.Windows.Forms.DataGridView eMPRESA1DataGridView;
+    private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+    private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+    private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+    private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
   }
 }

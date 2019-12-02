@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Controller {
-  class SimulacoesController {
-
+  public class SimulacoesController {
+    DatabaseConnection objConn = new DatabaseConnection();
   }
 }
