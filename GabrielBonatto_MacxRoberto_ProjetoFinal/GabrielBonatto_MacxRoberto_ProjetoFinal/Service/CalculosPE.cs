@@ -50,12 +50,12 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Service
 
     private Double CalcularGanhoPerda()
     {
-      return CalcularTotalDeVendas() - simulacoes.CustoFixoTotal;
+      return CalcularTotalDeVendas() - CalcularCustoTotal();
     }
 
     private Double CalcularCustoUnitario()
     {
-      return simulacoes.CustoFixoTotal / CalcularQuantidadeAtual();
+      return CalcularCustoTotal() / CalcularQuantidadeAtual();
     }
 
 
