@@ -34,7 +34,6 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Service
         count++;
       }
 
-      Console.WriteLine("==================TESTANDO CALCULO==================");
       foreach (ResultadoSimulacao item in resultados)
       {
         Console.WriteLine(resultados.IndexOf(item) + "   " + item.Quantidade + "   "

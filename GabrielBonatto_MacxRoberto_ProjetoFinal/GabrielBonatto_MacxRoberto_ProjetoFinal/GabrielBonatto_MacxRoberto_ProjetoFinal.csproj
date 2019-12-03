@@ -75,6 +75,12 @@
     <Compile Include="View\CadSimulacoes.Designer.cs">
       <DependentUpon>CadSimulacoes.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\GridSimulacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\GridSimulacoes.Designer.cs">
+      <DependentUpon>GridSimulacoes.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </Compile>
     <EmbeddedResource Include="View\CadSimulacoes.resx">
       <DependentUpon>CadSimulacoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\GridSimulacoes.resx">
+      <DependentUpon>GridSimulacoes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

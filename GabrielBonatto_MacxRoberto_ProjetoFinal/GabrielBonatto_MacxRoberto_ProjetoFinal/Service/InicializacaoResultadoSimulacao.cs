@@ -29,7 +29,7 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Service
       double ganhoPerda = totalVendas - custoTotal;
 
       return new ResultadoSimulacao(vendaInicial, custoTotal, totalVendas,
-                                    custoUnit, ganhoPerda);
+                                   ganhoPerda, custoUnit);
     }
   }
 }

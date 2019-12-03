@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Model {
-  class Simulacoes {
+  public class Simulacoes {
 
     public long? Id { get; set; }
     public double CustoFixoTotal { get; set; }
@@ -32,6 +32,9 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Model {
       QtdeVendaFinal = qtdeVendaFinal;
       IncrementoUnit = incrementoUnit;
       Empresa = empresa ?? throw new ArgumentNullException(nameof(empresa));
+    }
+
+    public Simulacoes() {
     }
 
     public override bool Equals(object obj) {
