@@ -21,7 +21,7 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.View {
     }
 
     private void Button1_Click(object sender, EventArgs e) {
-      new CadEmpresa().Show();
+      new TabelaEmpresa().Show();
     }
 
     private void EMPRESA1BindingNavigatorSaveItem_Click(object sender, EventArgs e) {

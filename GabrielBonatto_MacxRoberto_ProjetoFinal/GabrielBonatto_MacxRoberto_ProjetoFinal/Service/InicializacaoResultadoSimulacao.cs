@@ -25,8 +25,8 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Service
       int vendaInicial = simulacoes.QtdeVendaInicial;
       double custoTotal = simulacoes.CustoFixoTotal + (simulacoes.CustoVarUnit * simulacoes.QtdeVendaInicial);
       double totalVendas = simulacoes.PrecoUnit * simulacoes.QtdeVendaInicial;
-      double custoUnit = simulacoes.CustoFixoTotal / simulacoes.QtdeVendaInicial;
-      double ganhoPerda = totalVendas - simulacoes.CustoFixoTotal;
+      double custoUnit = custoTotal / simulacoes.QtdeVendaInicial;
+      double ganhoPerda = totalVendas - custoTotal;
 
       return new ResultadoSimulacao(vendaInicial, custoTotal, totalVendas,
                                     custoUnit, ganhoPerda);

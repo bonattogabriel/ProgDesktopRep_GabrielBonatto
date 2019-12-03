@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Model
 {
-  class ResultadoSimulacao
+  public class ResultadoSimulacao
   {
     public int Quantidade { get; set; }
     public double CustoTotal { get; set; }
@@ -21,6 +21,9 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Model
       TotalVendas = totalVendas;
       GanhoPerda = ganhoPerda;
       CustoUnitario = custoUnitario;
+    }
+
+    public ResultadoSimulacao() {
     }
   }
 }

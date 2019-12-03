@@ -1,4 +1,5 @@
 ﻿using GabrielBonatto_MacxRoberto_ProjetoFinal.Model;
+using GabrielBonatto_MacxRoberto_ProjetoFinal.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,7 +30,7 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.View {
     }
 
     private void VisualizarTabelaToolStripMenuItem_Click(object sender, EventArgs e) {
-      new TabelaSimulacoes().Show();
+      new PontoDeEquilibrio(new CalculaResultadosSimulacao(new Simulacoes(1, 1000000.00, 12345.67, 23456.78, 10, 150, 10, new Empresa(1, "teste", "1231231", "123123"))).CalcularListaResultados()).Show();
     }
   }
 }

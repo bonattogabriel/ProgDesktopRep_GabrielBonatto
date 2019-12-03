@@ -27,7 +27,7 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Service
       CalculosPe cauculoPe = new CalculosPe(this.simulacoes);
       resultados.Add(new InicializacaoResultadoSimulacao(this.simulacoes).CriarItemInicial());
       int count = 0;
-      while (resultados[count].Quantidade < simulacoes.QtdeVendaInicial)
+      while (resultados[count].Quantidade < simulacoes.QtdeVendaFinal)
       {
         resultados.Add(cauculoPe.
                         CalculularNovoResultado(resultados[count]));
