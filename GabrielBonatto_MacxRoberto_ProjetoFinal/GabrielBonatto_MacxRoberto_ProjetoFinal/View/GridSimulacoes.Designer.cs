@@ -24,21 +24,28 @@
     /// </summary>
     private void InitializeComponent() {
       this.components = new System.ComponentModel.Container();
+      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
       this.dataGridView1 = new System.Windows.Forms.DataGridView();
-      this.projetoFinalDataSet = new GabrielBonatto_MacxRoberto_ProjetoFinal.ProjetoFinalDataSet();
       this.sIMULACOESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+      this.projetoFinalDataSet = new GabrielBonatto_MacxRoberto_ProjetoFinal.ProjetoFinalDataSet();
       this.sIMULACOESTableAdapter = new GabrielBonatto_MacxRoberto_ProjetoFinal.ProjetoFinalDataSetTableAdapters.SIMULACOESTableAdapter();
-      this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-      this.custoFixoTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-      this.custoVarUnitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-      this.precoUnitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-      this.qtdeVendaInicialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-      this.qtdeVendaFinalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-      this.incrementounitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+      this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+      this.CustoFixoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+      this.CustoVarUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+      this.PrecoUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+      this.QtdeVendaInicial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+      this.QtdeVendaFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+      this.Incrementounit = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.empresaIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
       ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.projetoFinalDataSet)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.sIMULACOESBindingSource)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.projetoFinalDataSet)).BeginInit();
       this.SuspendLayout();
       // 
       // dataGridView1
@@ -46,13 +53,13 @@
       this.dataGridView1.AutoGenerateColumns = false;
       this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
       this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.custoFixoTotalDataGridViewTextBoxColumn,
-            this.custoVarUnitDataGridViewTextBoxColumn,
-            this.precoUnitDataGridViewTextBoxColumn,
-            this.qtdeVendaInicialDataGridViewTextBoxColumn,
-            this.qtdeVendaFinalDataGridViewTextBoxColumn,
-            this.incrementounitDataGridViewTextBoxColumn,
+            this.Id,
+            this.CustoFixoTotal,
+            this.CustoVarUnit,
+            this.PrecoUnit,
+            this.QtdeVendaInicial,
+            this.QtdeVendaFinal,
+            this.Incrementounit,
             this.empresaIdDataGridViewTextBoxColumn});
       this.dataGridView1.DataSource = this.sIMULACOESBindingSource;
       this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -60,63 +67,85 @@
       this.dataGridView1.Name = "dataGridView1";
       this.dataGridView1.Size = new System.Drawing.Size(844, 385);
       this.dataGridView1.TabIndex = 0;
-      // 
-      // projetoFinalDataSet
-      // 
-      this.projetoFinalDataSet.DataSetName = "ProjetoFinalDataSet";
-      this.projetoFinalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+      this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellDoubleClick);
       // 
       // sIMULACOESBindingSource
       // 
       this.sIMULACOESBindingSource.DataMember = "SIMULACOES";
       this.sIMULACOESBindingSource.DataSource = this.projetoFinalDataSet;
       // 
+      // projetoFinalDataSet
+      // 
+      this.projetoFinalDataSet.DataSetName = "ProjetoFinalDataSet";
+      this.projetoFinalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+      // 
       // sIMULACOESTableAdapter
       // 
       this.sIMULACOESTableAdapter.ClearBeforeFill = true;
       // 
-      // idDataGridViewTextBoxColumn
+      // Id
       // 
-      this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-      this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-      this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-      this.idDataGridViewTextBoxColumn.ReadOnly = true;
+      this.Id.DataPropertyName = "Id";
+      dataGridViewCellStyle8.Format = "N0";
+      dataGridViewCellStyle8.NullValue = "0";
+      this.Id.DefaultCellStyle = dataGridViewCellStyle8;
+      this.Id.HeaderText = "Id";
+      this.Id.Name = "Id";
+      this.Id.ReadOnly = true;
       // 
-      // custoFixoTotalDataGridViewTextBoxColumn
+      // CustoFixoTotal
       // 
-      this.custoFixoTotalDataGridViewTextBoxColumn.DataPropertyName = "CustoFixoTotal";
-      this.custoFixoTotalDataGridViewTextBoxColumn.HeaderText = "CustoFixoTotal";
-      this.custoFixoTotalDataGridViewTextBoxColumn.Name = "custoFixoTotalDataGridViewTextBoxColumn";
+      this.CustoFixoTotal.DataPropertyName = "CustoFixoTotal";
+      dataGridViewCellStyle9.Format = "N2";
+      dataGridViewCellStyle9.NullValue = "0";
+      this.CustoFixoTotal.DefaultCellStyle = dataGridViewCellStyle9;
+      this.CustoFixoTotal.HeaderText = "CustoFixoTotal";
+      this.CustoFixoTotal.Name = "CustoFixoTotal";
       // 
-      // custoVarUnitDataGridViewTextBoxColumn
+      // CustoVarUnit
       // 
-      this.custoVarUnitDataGridViewTextBoxColumn.DataPropertyName = "CustoVarUnit";
-      this.custoVarUnitDataGridViewTextBoxColumn.HeaderText = "CustoVarUnit";
-      this.custoVarUnitDataGridViewTextBoxColumn.Name = "custoVarUnitDataGridViewTextBoxColumn";
+      this.CustoVarUnit.DataPropertyName = "CustoVarUnit";
+      dataGridViewCellStyle10.Format = "N2";
+      dataGridViewCellStyle10.NullValue = "1";
+      this.CustoVarUnit.DefaultCellStyle = dataGridViewCellStyle10;
+      this.CustoVarUnit.HeaderText = "CustoVarUnit";
+      this.CustoVarUnit.Name = "CustoVarUnit";
       // 
-      // precoUnitDataGridViewTextBoxColumn
+      // PrecoUnit
       // 
-      this.precoUnitDataGridViewTextBoxColumn.DataPropertyName = "PrecoUnit";
-      this.precoUnitDataGridViewTextBoxColumn.HeaderText = "PrecoUnit";
-      this.precoUnitDataGridViewTextBoxColumn.Name = "precoUnitDataGridViewTextBoxColumn";
+      this.PrecoUnit.DataPropertyName = "PrecoUnit";
+      dataGridViewCellStyle11.Format = "N2";
+      dataGridViewCellStyle11.NullValue = "1";
+      this.PrecoUnit.DefaultCellStyle = dataGridViewCellStyle11;
+      this.PrecoUnit.HeaderText = "PrecoUnit";
+      this.PrecoUnit.Name = "PrecoUnit";
       // 
-      // qtdeVendaInicialDataGridViewTextBoxColumn
+      // QtdeVendaInicial
       // 
-      this.qtdeVendaInicialDataGridViewTextBoxColumn.DataPropertyName = "QtdeVendaInicial";
-      this.qtdeVendaInicialDataGridViewTextBoxColumn.HeaderText = "QtdeVendaInicial";
-      this.qtdeVendaInicialDataGridViewTextBoxColumn.Name = "qtdeVendaInicialDataGridViewTextBoxColumn";
+      this.QtdeVendaInicial.DataPropertyName = "QtdeVendaInicial";
+      dataGridViewCellStyle12.Format = "N0";
+      dataGridViewCellStyle12.NullValue = "0";
+      this.QtdeVendaInicial.DefaultCellStyle = dataGridViewCellStyle12;
+      this.QtdeVendaInicial.HeaderText = "QtdeVendaInicial";
+      this.QtdeVendaInicial.Name = "QtdeVendaInicial";
       // 
-      // qtdeVendaFinalDataGridViewTextBoxColumn
+      // QtdeVendaFinal
       // 
-      this.qtdeVendaFinalDataGridViewTextBoxColumn.DataPropertyName = "QtdeVendaFinal";
-      this.qtdeVendaFinalDataGridViewTextBoxColumn.HeaderText = "QtdeVendaFinal";
-      this.qtdeVendaFinalDataGridViewTextBoxColumn.Name = "qtdeVendaFinalDataGridViewTextBoxColumn";
+      this.QtdeVendaFinal.DataPropertyName = "QtdeVendaFinal";
+      dataGridViewCellStyle13.Format = "N0";
+      dataGridViewCellStyle13.NullValue = "1";
+      this.QtdeVendaFinal.DefaultCellStyle = dataGridViewCellStyle13;
+      this.QtdeVendaFinal.HeaderText = "QtdeVendaFinal";
+      this.QtdeVendaFinal.Name = "QtdeVendaFinal";
       // 
-      // incrementounitDataGridViewTextBoxColumn
+      // Incrementounit
       // 
-      this.incrementounitDataGridViewTextBoxColumn.DataPropertyName = "Incrementounit";
-      this.incrementounitDataGridViewTextBoxColumn.HeaderText = "Incrementounit";
-      this.incrementounitDataGridViewTextBoxColumn.Name = "incrementounitDataGridViewTextBoxColumn";
+      this.Incrementounit.DataPropertyName = "Incrementounit";
+      dataGridViewCellStyle14.Format = "N0";
+      dataGridViewCellStyle14.NullValue = "1";
+      this.Incrementounit.DefaultCellStyle = dataGridViewCellStyle14;
+      this.Incrementounit.HeaderText = "Incrementounit";
+      this.Incrementounit.Name = "Incrementounit";
       // 
       // empresaIdDataGridViewTextBoxColumn
       // 
@@ -134,8 +163,8 @@
       this.Text = "GridSimulacoes";
       this.Load += new System.EventHandler(this.GridSimulacoes_Load);
       ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.projetoFinalDataSet)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.sIMULACOESBindingSource)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.projetoFinalDataSet)).EndInit();
       this.ResumeLayout(false);
 
     }
@@ -146,13 +175,13 @@
     private ProjetoFinalDataSet projetoFinalDataSet;
     private System.Windows.Forms.BindingSource sIMULACOESBindingSource;
     private ProjetoFinalDataSetTableAdapters.SIMULACOESTableAdapter sIMULACOESTableAdapter;
-    private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-    private System.Windows.Forms.DataGridViewTextBoxColumn custoFixoTotalDataGridViewTextBoxColumn;
-    private System.Windows.Forms.DataGridViewTextBoxColumn custoVarUnitDataGridViewTextBoxColumn;
-    private System.Windows.Forms.DataGridViewTextBoxColumn precoUnitDataGridViewTextBoxColumn;
-    private System.Windows.Forms.DataGridViewTextBoxColumn qtdeVendaInicialDataGridViewTextBoxColumn;
-    private System.Windows.Forms.DataGridViewTextBoxColumn qtdeVendaFinalDataGridViewTextBoxColumn;
-    private System.Windows.Forms.DataGridViewTextBoxColumn incrementounitDataGridViewTextBoxColumn;
+    private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+    private System.Windows.Forms.DataGridViewTextBoxColumn CustoFixoTotal;
+    private System.Windows.Forms.DataGridViewTextBoxColumn CustoVarUnit;
+    private System.Windows.Forms.DataGridViewTextBoxColumn PrecoUnit;
+    private System.Windows.Forms.DataGridViewTextBoxColumn QtdeVendaInicial;
+    private System.Windows.Forms.DataGridViewTextBoxColumn QtdeVendaFinal;
+    private System.Windows.Forms.DataGridViewTextBoxColumn Incrementounit;
     private System.Windows.Forms.DataGridViewTextBoxColumn empresaIdDataGridViewTextBoxColumn;
   }
 }

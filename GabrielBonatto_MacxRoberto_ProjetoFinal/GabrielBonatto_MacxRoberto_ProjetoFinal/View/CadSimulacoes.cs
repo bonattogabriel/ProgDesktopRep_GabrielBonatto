@@ -22,12 +22,10 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.View {
     }
 
     private void CadSimulacoes_Load(object sender, EventArgs e) {
+      // TODO: esta linha de código carrega dados na tabela 'projetoFinalDataSetGeral.EMPRESA'. Você pode movê-la ou removê-la conforme necessário.
+      this.eMPRESATableAdapter.Fill(this.projetoFinalDataSetGeral.EMPRESA);
       // TODO: esta linha de código carrega dados na tabela 'projetoFinalDataSet.SIMULACOES'. Você pode movê-la ou removê-la conforme necessário.
       this.sIMULACOESTableAdapter.Fill(this.projetoFinalDataSet.SIMULACOES);
-
-    }
-
-    private void SIMULACOESDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e) {
 
     }
   }

@@ -285,7 +285,7 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal {
             
             private global::System.Data.DataColumn columnCustoVarUnit;
             
-            private global::System.Data.DataColumn columnPrecoUnit;
+            private global::System.Data.DataColumn columnPrecoUnit2;
             
             private global::System.Data.DataColumn columnQtdeVendaInicial;
             
@@ -294,6 +294,8 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal {
             private global::System.Data.DataColumn columnIncrementounit;
             
             private global::System.Data.DataColumn columnEmpresaId;
+            
+            private global::System.Data.DataColumn columnPrecoUnit;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -354,9 +356,9 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn PrecoUnitColumn {
+            public global::System.Data.DataColumn PrecoUnit2Column {
                 get {
-                    return this.columnPrecoUnit;
+                    return this.columnPrecoUnit2;
                 }
             }
             
@@ -389,6 +391,14 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal {
             public global::System.Data.DataColumn EmpresaIdColumn {
                 get {
                     return this.columnEmpresaId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PrecoUnitColumn {
+                get {
+                    return this.columnPrecoUnit;
                 }
             }
             
@@ -429,17 +439,18 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SIMULACOESRow AddSIMULACOESRow(decimal CustoFixoTotal, decimal CustoVarUnit, int PrecoUnit, int QtdeVendaInicial, int QtdeVendaFinal, int Incrementounit, int EmpresaId) {
+            public SIMULACOESRow AddSIMULACOESRow(decimal CustoFixoTotal, decimal CustoVarUnit, int PrecoUnit2, int QtdeVendaInicial, int QtdeVendaFinal, int Incrementounit, int EmpresaId, decimal PrecoUnit) {
                 SIMULACOESRow rowSIMULACOESRow = ((SIMULACOESRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         CustoFixoTotal,
                         CustoVarUnit,
-                        PrecoUnit,
+                        PrecoUnit2,
                         QtdeVendaInicial,
                         QtdeVendaFinal,
                         Incrementounit,
-                        EmpresaId};
+                        EmpresaId,
+                        PrecoUnit};
                 rowSIMULACOESRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSIMULACOESRow);
                 return rowSIMULACOESRow;
@@ -472,11 +483,12 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal {
                 this.columnId = base.Columns["Id"];
                 this.columnCustoFixoTotal = base.Columns["CustoFixoTotal"];
                 this.columnCustoVarUnit = base.Columns["CustoVarUnit"];
-                this.columnPrecoUnit = base.Columns["PrecoUnit"];
+                this.columnPrecoUnit2 = base.Columns["PrecoUnit2"];
                 this.columnQtdeVendaInicial = base.Columns["QtdeVendaInicial"];
                 this.columnQtdeVendaFinal = base.Columns["QtdeVendaFinal"];
                 this.columnIncrementounit = base.Columns["Incrementounit"];
                 this.columnEmpresaId = base.Columns["EmpresaId"];
+                this.columnPrecoUnit = base.Columns["PrecoUnit"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -488,8 +500,8 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal {
                 base.Columns.Add(this.columnCustoFixoTotal);
                 this.columnCustoVarUnit = new global::System.Data.DataColumn("CustoVarUnit", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCustoVarUnit);
-                this.columnPrecoUnit = new global::System.Data.DataColumn("PrecoUnit", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPrecoUnit);
+                this.columnPrecoUnit2 = new global::System.Data.DataColumn("PrecoUnit2", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrecoUnit2);
                 this.columnQtdeVendaInicial = new global::System.Data.DataColumn("QtdeVendaInicial", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQtdeVendaInicial);
                 this.columnQtdeVendaFinal = new global::System.Data.DataColumn("QtdeVendaFinal", typeof(int), null, global::System.Data.MappingType.Element);
@@ -498,6 +510,8 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal {
                 base.Columns.Add(this.columnIncrementounit);
                 this.columnEmpresaId = new global::System.Data.DataColumn("EmpresaId", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmpresaId);
+                this.columnPrecoUnit = new global::System.Data.DataColumn("PrecoUnit", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrecoUnit);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -691,17 +705,17 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int PrecoUnit {
+            public int PrecoUnit2 {
                 get {
                     try {
-                        return ((int)(this[this.tableSIMULACOES.PrecoUnitColumn]));
+                        return ((int)(this[this.tableSIMULACOES.PrecoUnit2Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'PrecoUnit\' na tabela \'SIMULACOES\' é DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'PrecoUnit2\' na tabela \'SIMULACOES\' é DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSIMULACOES.PrecoUnitColumn] = value;
+                    this[this.tableSIMULACOES.PrecoUnit2Column] = value;
                 }
             }
             
@@ -771,6 +785,22 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal PrecoUnit {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableSIMULACOES.PrecoUnitColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'PrecoUnit\' na tabela \'SIMULACOES\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSIMULACOES.PrecoUnitColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsCustoFixoTotalNull() {
                 return this.IsNull(this.tableSIMULACOES.CustoFixoTotalColumn);
             }
@@ -795,14 +825,14 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsPrecoUnitNull() {
-                return this.IsNull(this.tableSIMULACOES.PrecoUnitColumn);
+            public bool IsPrecoUnit2Null() {
+                return this.IsNull(this.tableSIMULACOES.PrecoUnit2Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetPrecoUnitNull() {
-                this[this.tableSIMULACOES.PrecoUnitColumn] = global::System.Convert.DBNull;
+            public void SetPrecoUnit2Null() {
+                this[this.tableSIMULACOES.PrecoUnit2Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -851,6 +881,18 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetEmpresaIdNull() {
                 this[this.tableSIMULACOES.EmpresaIdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPrecoUnitNull() {
+                return this.IsNull(this.tableSIMULACOES.PrecoUnitColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPrecoUnitNull() {
+                this[this.tableSIMULACOES.PrecoUnitColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1016,11 +1058,11 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.ProjetoFinalDataSetTableAdapte
             tableMapping.ColumnMappings.Add("Id", "Id");
             tableMapping.ColumnMappings.Add("CustoFixoTotal", "CustoFixoTotal");
             tableMapping.ColumnMappings.Add("CustoVarUnit", "CustoVarUnit");
-            tableMapping.ColumnMappings.Add("PrecoUnit", "PrecoUnit");
             tableMapping.ColumnMappings.Add("QtdeVendaInicial", "QtdeVendaInicial");
             tableMapping.ColumnMappings.Add("QtdeVendaFinal", "QtdeVendaFinal");
             tableMapping.ColumnMappings.Add("Incrementounit", "Incrementounit");
             tableMapping.ColumnMappings.Add("EmpresaId", "EmpresaId");
+            tableMapping.ColumnMappings.Add("PrecoUnit", "PrecoUnit");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -1032,7 +1074,7 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.ProjetoFinalDataSetTableAdapte
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CustoVarUnit", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CustoVarUnit", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CustoVarUnit", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "CustoVarUnit", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PrecoUnit", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PrecoUnit", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PrecoUnit", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PrecoUnit", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PrecoUnit", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "PrecoUnit", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_QtdeVendaInicial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdeVendaInicial", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QtdeVendaInicial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdeVendaInicial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_QtdeVendaFinal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdeVendaFinal", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1048,7 +1090,7 @@ SELECT Id, CustoFixoTotal, CustoVarUnit, PrecoUnit, QtdeVendaInicial, QtdeVendaF
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CustoFixoTotal", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "CustoFixoTotal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CustoVarUnit", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "CustoVarUnit", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PrecoUnit", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PrecoUnit", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PrecoUnit", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "PrecoUnit", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QtdeVendaInicial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdeVendaInicial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QtdeVendaFinal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdeVendaFinal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Incrementounit", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Incrementounit", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1060,7 +1102,7 @@ SELECT Id, CustoFixoTotal, CustoVarUnit, PrecoUnit, QtdeVendaInicial, QtdeVendaF
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CustoFixoTotal", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "CustoFixoTotal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CustoVarUnit", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "CustoVarUnit", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PrecoUnit", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PrecoUnit", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PrecoUnit", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "PrecoUnit", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QtdeVendaInicial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdeVendaInicial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QtdeVendaFinal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdeVendaFinal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Incrementounit", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Incrementounit", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1071,7 +1113,7 @@ SELECT Id, CustoFixoTotal, CustoVarUnit, PrecoUnit, QtdeVendaInicial, QtdeVendaF
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CustoVarUnit", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CustoVarUnit", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CustoVarUnit", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "CustoVarUnit", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PrecoUnit", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PrecoUnit", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PrecoUnit", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PrecoUnit", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PrecoUnit", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "PrecoUnit", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_QtdeVendaInicial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdeVendaInicial", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QtdeVendaInicial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdeVendaInicial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_QtdeVendaFinal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdeVendaFinal", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1158,7 +1200,7 @@ SELECT Id, CustoFixoTotal, CustoVarUnit, PrecoUnit, QtdeVendaInicial, QtdeVendaF
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(decimal Original_Id, global::System.Nullable<decimal> Original_CustoFixoTotal, global::System.Nullable<decimal> Original_CustoVarUnit, global::System.Nullable<int> Original_PrecoUnit, global::System.Nullable<int> Original_QtdeVendaInicial, global::System.Nullable<int> Original_QtdeVendaFinal, global::System.Nullable<int> Original_Incrementounit, global::System.Nullable<int> Original_EmpresaId) {
+        public virtual int Delete(decimal Original_Id, global::System.Nullable<decimal> Original_CustoFixoTotal, global::System.Nullable<decimal> Original_CustoVarUnit, global::System.Nullable<decimal> Original_PrecoUnit, global::System.Nullable<int> Original_QtdeVendaInicial, global::System.Nullable<int> Original_QtdeVendaFinal, global::System.Nullable<int> Original_Incrementounit, global::System.Nullable<int> Original_EmpresaId) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((decimal)(Original_Id));
             if ((Original_CustoFixoTotal.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -1178,7 +1220,7 @@ SELECT Id, CustoFixoTotal, CustoVarUnit, PrecoUnit, QtdeVendaInicial, QtdeVendaF
             }
             if ((Original_PrecoUnit.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_PrecoUnit.Value));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((decimal)(Original_PrecoUnit.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
@@ -1236,7 +1278,7 @@ SELECT Id, CustoFixoTotal, CustoVarUnit, PrecoUnit, QtdeVendaInicial, QtdeVendaF
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<decimal> CustoFixoTotal, global::System.Nullable<decimal> CustoVarUnit, global::System.Nullable<int> PrecoUnit, global::System.Nullable<int> QtdeVendaInicial, global::System.Nullable<int> QtdeVendaFinal, global::System.Nullable<int> Incrementounit, global::System.Nullable<int> EmpresaId) {
+        public virtual int Insert(global::System.Nullable<decimal> CustoFixoTotal, global::System.Nullable<decimal> CustoVarUnit, global::System.Nullable<decimal> PrecoUnit, global::System.Nullable<int> QtdeVendaInicial, global::System.Nullable<int> QtdeVendaFinal, global::System.Nullable<int> Incrementounit, global::System.Nullable<int> EmpresaId) {
             if ((CustoFixoTotal.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((decimal)(CustoFixoTotal.Value));
             }
@@ -1250,7 +1292,7 @@ SELECT Id, CustoFixoTotal, CustoVarUnit, PrecoUnit, QtdeVendaInicial, QtdeVendaF
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             if ((PrecoUnit.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(PrecoUnit.Value));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((decimal)(PrecoUnit.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -1302,7 +1344,7 @@ SELECT Id, CustoFixoTotal, CustoVarUnit, PrecoUnit, QtdeVendaInicial, QtdeVendaF
         public virtual int Update(
                     global::System.Nullable<decimal> CustoFixoTotal, 
                     global::System.Nullable<decimal> CustoVarUnit, 
-                    global::System.Nullable<int> PrecoUnit, 
+                    global::System.Nullable<decimal> PrecoUnit, 
                     global::System.Nullable<int> QtdeVendaInicial, 
                     global::System.Nullable<int> QtdeVendaFinal, 
                     global::System.Nullable<int> Incrementounit, 
@@ -1310,7 +1352,7 @@ SELECT Id, CustoFixoTotal, CustoVarUnit, PrecoUnit, QtdeVendaInicial, QtdeVendaF
                     decimal Original_Id, 
                     global::System.Nullable<decimal> Original_CustoFixoTotal, 
                     global::System.Nullable<decimal> Original_CustoVarUnit, 
-                    global::System.Nullable<int> Original_PrecoUnit, 
+                    global::System.Nullable<decimal> Original_PrecoUnit, 
                     global::System.Nullable<int> Original_QtdeVendaInicial, 
                     global::System.Nullable<int> Original_QtdeVendaFinal, 
                     global::System.Nullable<int> Original_Incrementounit, 
@@ -1329,7 +1371,7 @@ SELECT Id, CustoFixoTotal, CustoVarUnit, PrecoUnit, QtdeVendaInicial, QtdeVendaF
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             if ((PrecoUnit.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(PrecoUnit.Value));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(PrecoUnit.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -1377,7 +1419,7 @@ SELECT Id, CustoFixoTotal, CustoVarUnit, PrecoUnit, QtdeVendaInicial, QtdeVendaF
             }
             if ((Original_PrecoUnit.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_PrecoUnit.Value));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((decimal)(Original_PrecoUnit.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
@@ -1436,7 +1478,7 @@ SELECT Id, CustoFixoTotal, CustoVarUnit, PrecoUnit, QtdeVendaInicial, QtdeVendaF
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<decimal> CustoFixoTotal, global::System.Nullable<decimal> CustoVarUnit, global::System.Nullable<int> PrecoUnit, global::System.Nullable<int> QtdeVendaInicial, global::System.Nullable<int> QtdeVendaFinal, global::System.Nullable<int> Incrementounit, global::System.Nullable<int> EmpresaId, decimal Original_Id, global::System.Nullable<decimal> Original_CustoFixoTotal, global::System.Nullable<decimal> Original_CustoVarUnit, global::System.Nullable<int> Original_PrecoUnit, global::System.Nullable<int> Original_QtdeVendaInicial, global::System.Nullable<int> Original_QtdeVendaFinal, global::System.Nullable<int> Original_Incrementounit, global::System.Nullable<int> Original_EmpresaId) {
+        public virtual int Update(global::System.Nullable<decimal> CustoFixoTotal, global::System.Nullable<decimal> CustoVarUnit, global::System.Nullable<decimal> PrecoUnit, global::System.Nullable<int> QtdeVendaInicial, global::System.Nullable<int> QtdeVendaFinal, global::System.Nullable<int> Incrementounit, global::System.Nullable<int> EmpresaId, decimal Original_Id, global::System.Nullable<decimal> Original_CustoFixoTotal, global::System.Nullable<decimal> Original_CustoVarUnit, global::System.Nullable<decimal> Original_PrecoUnit, global::System.Nullable<int> Original_QtdeVendaInicial, global::System.Nullable<int> Original_QtdeVendaFinal, global::System.Nullable<int> Original_Incrementounit, global::System.Nullable<int> Original_EmpresaId) {
             return this.Update(CustoFixoTotal, CustoVarUnit, PrecoUnit, QtdeVendaInicial, QtdeVendaFinal, Incrementounit, EmpresaId, Original_Id, Original_CustoFixoTotal, Original_CustoVarUnit, Original_PrecoUnit, Original_QtdeVendaInicial, Original_QtdeVendaFinal, Original_Incrementounit, Original_EmpresaId, Original_Id);
         }
     }

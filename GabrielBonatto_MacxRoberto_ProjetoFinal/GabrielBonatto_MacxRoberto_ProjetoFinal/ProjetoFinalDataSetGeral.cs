@@ -2,5 +2,7 @@
 
 
   partial class ProjetoFinalDataSetGeral {
+    partial class SIMULACOESDataTable {
+    }
   }
 }

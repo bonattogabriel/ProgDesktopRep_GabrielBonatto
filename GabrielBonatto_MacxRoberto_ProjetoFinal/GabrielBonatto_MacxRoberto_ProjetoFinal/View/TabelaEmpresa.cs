@@ -16,7 +16,7 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.View {
 
     private void TabelaEmpresa_Load(object sender, EventArgs e) {
       // TODO: esta linha de código carrega dados na tabela 'projetoFinalDataSetGeral.EMPRESA1'. Você pode movê-la ou removê-la conforme necessário.
-      this.eMPRESA1TableAdapter.Fill(this.projetoFinalDataSetGeral.EMPRESA1);
+      this.eMPRESA1TableAdapter.Fill(this.projetoFinalDataSetGeral.EMPRESA);
 
     }
 

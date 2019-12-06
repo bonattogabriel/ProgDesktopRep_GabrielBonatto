@@ -27,20 +27,20 @@
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TabelaEmpresa));
       this.projetoFinalDataSetGeral = new GabrielBonatto_MacxRoberto_ProjetoFinal.ProjetoFinalDataSetGeral();
       this.eMPRESA1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-      this.eMPRESA1TableAdapter = new GabrielBonatto_MacxRoberto_ProjetoFinal.ProjetoFinalDataSetGeralTableAdapters.EMPRESA1TableAdapter();
+      this.eMPRESA1TableAdapter = new GabrielBonatto_MacxRoberto_ProjetoFinal.ProjetoFinalDataSetGeralTableAdapters.EMPRESATableAdapter();
       this.tableAdapterManager = new GabrielBonatto_MacxRoberto_ProjetoFinal.ProjetoFinalDataSetGeralTableAdapters.TableAdapterManager();
       this.eMPRESA1BindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+      this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+      this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+      this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
       this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
       this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
       this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
       this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-      this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
       this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
       this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
       this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
       this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-      this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-      this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
       this.eMPRESA1BindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
       this.eMPRESA1DataGridView = new System.Windows.Forms.DataGridView();
       this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,7 +61,7 @@
       // 
       // eMPRESA1BindingSource
       // 
-      this.eMPRESA1BindingSource.DataMember = "EMPRESA1";
+      this.eMPRESA1BindingSource.DataMember = "EMPRESA";
       this.eMPRESA1BindingSource.DataSource = this.projetoFinalDataSetGeral;
       // 
       // eMPRESA1TableAdapter
@@ -71,8 +71,7 @@
       // tableAdapterManager
       // 
       this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-      this.tableAdapterManager.EMPRESA1TableAdapter = this.eMPRESA1TableAdapter;
-      this.tableAdapterManager.EMPRESATableAdapter = null;
+      this.tableAdapterManager.EMPRESATableAdapter = this.eMPRESA1TableAdapter;
       this.tableAdapterManager.SIMULACOESTableAdapter = null;
       this.tableAdapterManager.UpdateOrder = GabrielBonatto_MacxRoberto_ProjetoFinal.ProjetoFinalDataSetGeralTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
       // 
@@ -105,6 +104,32 @@
       this.eMPRESA1BindingNavigator.Size = new System.Drawing.Size(503, 25);
       this.eMPRESA1BindingNavigator.TabIndex = 0;
       this.eMPRESA1BindingNavigator.Text = "bindingNavigator1";
+      // 
+      // bindingNavigatorAddNewItem
+      // 
+      this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+      this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+      this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+      this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+      this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+      this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+      this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.BindingNavigatorAddNewItem_Click);
+      // 
+      // bindingNavigatorCountItem
+      // 
+      this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+      this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+      this.bindingNavigatorCountItem.Text = "de {0}";
+      this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
+      // 
+      // bindingNavigatorDeleteItem
+      // 
+      this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+      this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+      this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+      this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+      this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+      this.bindingNavigatorDeleteItem.Text = "Excluir";
       // 
       // bindingNavigatorMoveFirstItem
       // 
@@ -139,16 +164,9 @@
       this.bindingNavigatorPositionItem.Text = "0";
       this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
       // 
-      // bindingNavigatorCountItem
-      // 
-      this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-      this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-      this.bindingNavigatorCountItem.Text = "de {0}";
-      this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
-      // 
       // bindingNavigatorSeparator1
       // 
-      this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+      this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
       this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
       // 
       // bindingNavigatorMoveNextItem
@@ -171,27 +189,8 @@
       // 
       // bindingNavigatorSeparator2
       // 
-      this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+      this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
       this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-      // 
-      // bindingNavigatorAddNewItem
-      // 
-      this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-      this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-      this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-      this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-      this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-      this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
-      this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.BindingNavigatorAddNewItem_Click);
-      // 
-      // bindingNavigatorDeleteItem
-      // 
-      this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-      this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-      this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-      this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-      this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-      this.bindingNavigatorDeleteItem.Text = "Excluir";
       // 
       // eMPRESA1BindingNavigatorSaveItem
       // 
@@ -267,7 +266,7 @@
 
     private ProjetoFinalDataSetGeral projetoFinalDataSetGeral;
     private System.Windows.Forms.BindingSource eMPRESA1BindingSource;
-    private ProjetoFinalDataSetGeralTableAdapters.EMPRESA1TableAdapter eMPRESA1TableAdapter;
+    private ProjetoFinalDataSetGeralTableAdapters.EMPRESATableAdapter eMPRESA1TableAdapter;
     private ProjetoFinalDataSetGeralTableAdapters.TableAdapterManager tableAdapterManager;
     private System.Windows.Forms.BindingNavigator eMPRESA1BindingNavigator;
     private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
