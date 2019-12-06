@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Service
 {
-   
-class CalculoItemResultado
-{
+  class CalculoItemResultado
+  {
     private Simulacoes simulacoes;
     private PontoEquilibrio pontoEquilibrio;
     private ResultadoSimulacao resultadoAtual;
