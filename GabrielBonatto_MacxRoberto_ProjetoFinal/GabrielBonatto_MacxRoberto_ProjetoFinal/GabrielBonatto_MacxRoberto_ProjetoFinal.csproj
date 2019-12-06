@@ -74,14 +74,14 @@
     <Compile Include="View\CadEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\CadEmpresa.Designer.cs">
-      <DependentUpon>CadEmpresa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\CadSimulacoes.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="View\CadSimulacoes.Designer.cs">
       <DependentUpon>CadSimulacoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\GridSimulacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\GridSimulacoes.Designer.cs">
+      <DependentUpon>GridSimulacoes.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Main.cs">
       <SubType>Form</SubType>
@@ -89,17 +89,17 @@
     <Compile Include="View\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\PontoDeEquilibrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PontoDeEquilibrio.Designer.cs">
+      <DependentUpon>PontoDeEquilibrio.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\TabelaEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\TabelaEmpresa.Designer.cs">
       <DependentUpon>TabelaEmpresa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\TabelaSimulacoes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\TabelaSimulacoes.Designer.cs">
-      <DependentUpon>TabelaSimulacoes.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -110,20 +110,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\CadEmpresa.resx">
-      <DependentUpon>CadEmpresa.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\CadSimulacoes.resx">
       <DependentUpon>CadSimulacoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\GridSimulacoes.resx">
+      <DependentUpon>GridSimulacoes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\PontoDeEquilibrio.resx">
+      <DependentUpon>PontoDeEquilibrio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\TabelaEmpresa.resx">
       <DependentUpon>TabelaEmpresa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\TabelaSimulacoes.resx">
-      <DependentUpon>TabelaSimulacoes.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ProjetoFinalDataSet.xsc">
       <DependentUpon>ProjetoFinalDataSet.xsd</DependentUpon>

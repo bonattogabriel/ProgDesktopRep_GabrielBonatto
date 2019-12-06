@@ -91,7 +91,6 @@
       this.Name = "Main";
       this.RightToLeftLayout = true;
       this.Text = "Cadastro";
-      this.Load += new System.EventHandler(this.Main_Load);
       this.menuStrip1.ResumeLayout(false);
       this.menuStrip1.PerformLayout();
       this.ResumeLayout(false);

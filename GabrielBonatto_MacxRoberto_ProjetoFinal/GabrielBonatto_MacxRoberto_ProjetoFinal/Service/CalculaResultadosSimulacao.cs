@@ -27,14 +27,13 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Service
       CalculoItemResultado cauculoResultados = new CalculoItemResultado(this.simulacoes);
       resultados.Add(new InicializacaoResultadoSimulacao(this.simulacoes).CriarItemInicial());
       int count = 0;
-      while (resultados[count].Quantidade < simulacoes.QtdeVendaInicial)
+      while (resultados[count].Quantidade < simulacoes.QtdeVendaFinal)
       {
         resultados.Add(cauculoResultados.
                         CalculularNovoResultado(resultados[count]));
         count++;
       }
 
-      Console.WriteLine("==================TESTANDO CALCULO==================");
       foreach (ResultadoSimulacao item in resultados)
       {
         Console.WriteLine(resultados.IndexOf(item) + "   " + item.Quantidade + "   "

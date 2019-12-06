@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Model
 {
-  class ResultadoSimulacao
+  public class ResultadoSimulacao
   {
     public int Quantidade { get; set; }
     public double CustoTotal { get; set; }
@@ -28,6 +28,9 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Model
       GanhoPerda = ganhoPerda;
       CustoUnitario = custoUnitario;
       IsPontoEquilibrio = isPontoEquilibrio;
+    }
+
+    public ResultadoSimulacao() {
     }
   }
 }

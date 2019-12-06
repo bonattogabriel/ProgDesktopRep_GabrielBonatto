@@ -9,16 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GabrielBonatto_MacxRoberto_ProjetoFinal.View {
-  public partial class TabelaSimulacoes : Form {
-    public TabelaSimulacoes() {
+  public partial class GridSimulacoes : Form {
+    public GridSimulacoes() {
       InitializeComponent();
     }
 
-    private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) {
-
-    }
-
-    private void TabelaSimulacoes_Load(object sender, EventArgs e) {
+    private void GridSimulacoes_Load(object sender, EventArgs e) {
       // TODO: esta linha de código carrega dados na tabela 'projetoFinalDataSet.SIMULACOES'. Você pode movê-la ou removê-la conforme necessário.
       this.sIMULACOESTableAdapter.Fill(this.projetoFinalDataSet.SIMULACOES);
 
