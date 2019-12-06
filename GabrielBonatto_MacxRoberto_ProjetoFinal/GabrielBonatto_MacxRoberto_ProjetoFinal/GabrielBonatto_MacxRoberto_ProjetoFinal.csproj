@@ -48,6 +48,8 @@
   <ItemGroup>
     <Compile Include="Controller\SimulacoesController.cs" />
     <Compile Include="Controller\EmpresaController.cs" />
+    <Compile Include="Model\PontoEquilibrio.cs" />
+    <Compile Include="Model\ResultadoSimulacao.cs" />
     <Compile Include="Model\Simulacoes.cs" />
     <Compile Include="Model\Empresa.cs" />
     <Compile Include="Program.cs" />
@@ -66,7 +68,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\CalculaResultadosSimulacao.cs" />
-    <Compile Include="Service\CalculosPE.cs" />
+    <Compile Include="Service\CalculoItemResultado.cs" />
+    <Compile Include="Service\CalculoPE.cs" />
+    <Compile Include="Service\InicializacaoResultadoSimulacao.cs" />
     <Compile Include="View\CadEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>

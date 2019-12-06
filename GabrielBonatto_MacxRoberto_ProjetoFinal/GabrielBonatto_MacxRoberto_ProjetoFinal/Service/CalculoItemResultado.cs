@@ -7,20 +7,17 @@ using System.Threading.Tasks;
 
 namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Service
 {
-  /// <summary>
-  /// Nao esta completamente implementada
-  /// - foi adicionado o calculo dos valores para um 
-  /// novo item do resultado da simulaçao com base nos 
-  /// dados da simulaçao e no resultado atual da simulaçao
-  /// - Falta o calculo de ponto de equilibrio.
-  /// </summary>
-  class CalculosPe
-  {
+   
+class CalculoItemResultado
+{
     private Simulacoes simulacoes;
+    private PontoEquilibrio pontoEquilibrio;
     private ResultadoSimulacao resultadoAtual;
 
-    public CalculosPe(Simulacoes simulacoes) {
+    public CalculoItemResultado(Simulacoes simulacoes, PontoEquilibrio pontoEquilibrio)
+    {
       this.simulacoes = simulacoes;
+      this.pontoEquilibrio = pontoEquilibrio;
     }
 
     public ResultadoSimulacao CalculularNovoResultado(ResultadoSimulacao resultadoAtual)
@@ -30,9 +27,10 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Service
                                     CalcularCustoTotal(),
                                     CalcularTotalDeVendas(),
                                     CalcularGanhoPerda(),
-                                    CalcularCustoUnitario() );
+                                    CalcularCustoUnitario(),
+                                    VerificarPontoEquilibrio());
     }
- 
+
     private int CalcularQuantidadeAtual()
     {
       return resultadoAtual.Quantidade + simulacoes.IncrementoUnit;
@@ -58,19 +56,11 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Service
       return CalcularCustoTotal() / CalcularQuantidadeAtual();
     }
 
-
-    // nao estao sendo usadas pois ainda n estamos controlando o PE
-    private Double CalcularEquilibrio() {
-      return simulacoes.CustoFixoTotal + (simulacoes.PrecoUnit - resultadoAtual.Quantidade );
+    private Boolean VerificarPontoEquilibrio()
+    {
+      return CalcularQuantidadeAtual() == pontoEquilibrio.QtdePontoEquilibrio &&
+             CalcularCustoTotal()      == pontoEquilibrio.CustoEquilibrio     &&
+             CalcularTotalDeVendas()   == pontoEquilibrio.ReceitaEquilibrio;
     }
-
-    private Double CalcularReceitaEquilibrio() {
-      return simulacoes.PrecoUnit * CalcularEquilibrio();
-    }
-
-    private Double CalcularCustoEquilibrio() {
-      return simulacoes.CustoFixoTotal + (simulacoes.CustoVarUnit * CalcularEquilibrio());
-    }
-
   }
 }

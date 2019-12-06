@@ -24,12 +24,12 @@ namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Service
 
     public List<ResultadoSimulacao> CalcularListaResultados()
     {
-      CalculosPe cauculoPe = new CalculosPe(this.simulacoes);
+      CalculoItemResultado cauculoResultados = new CalculoItemResultado(this.simulacoes);
       resultados.Add(new InicializacaoResultadoSimulacao(this.simulacoes).CriarItemInicial());
       int count = 0;
       while (resultados[count].Quantidade < simulacoes.QtdeVendaInicial)
       {
-        resultados.Add(cauculoPe.
+        resultados.Add(cauculoResultados.
                         CalculularNovoResultado(resultados[count]));
         count++;
       }
