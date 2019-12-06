@@ -7,29 +7,28 @@ using System.Threading.Tasks;
 
 namespace GabrielBonatto_MacxRoberto_ProjetoFinal.Service
 {
-  /// <summary>
-  /// Responsabilidade da classe é reaclizar o calculo 
-  /// do resultado da simulaçao recebida.
-  /// </summary>
+
   class CalculaResultadosSimulacao
   {
     private Simulacoes simulacoes;
+    private PontoEquilibrio pontoEquilibrio;
     private List<ResultadoSimulacao> resultados;
 
     public CalculaResultadosSimulacao(Simulacoes simulacoes)
     {
       this.simulacoes = simulacoes;
+      pontoEquilibrio = new CalculoPE(simulacoes).CalcularPontoDeEquilibrio();
       resultados = new List<ResultadoSimulacao>();
     }
 
     public List<ResultadoSimulacao> CalcularListaResultados()
     {
-      CalculosPe cauculoPe = new CalculosPe(this.simulacoes);
-      resultados.Add(new InicializacaoResultadoSimulacao(this.simulacoes).CriarItemInicial());
+      CalculoItemResultado cauculoResultados = new CalculoItemResultado(simulacoes, pontoEquilibrio);
+      resultados.Add(new InicializacaoResultadoSimulacao(simulacoes).CriarItemInicial());
       int count = 0;
       while (resultados[count].Quantidade < simulacoes.QtdeVendaFinal)
       {
-        resultados.Add(cauculoPe.
+        resultados.Add(cauculoResultados.
                         CalculularNovoResultado(resultados[count]));
         count++;
       }
